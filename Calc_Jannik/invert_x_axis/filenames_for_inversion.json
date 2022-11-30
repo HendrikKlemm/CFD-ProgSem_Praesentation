@@ -1,0 +1,18 @@
+{
+"files": ["toro4_AUSMD_0000000.0000000.csv", 
+    "toro4_AUSMD_0000000.0120000.csv", 
+    "toro4_AUSMD_ex_0000000.0000000.csv",
+    "toro4_AUSMD_ex_0000000.0120000.csv",
+    "toro4_god_0000000.0000000.csv",
+    "toro4_god_0000000.0120000.csv",
+    "toro4_god_ex_0000000.0000000.csv",
+    "toro4_god_ex_0000000.0120000.csv",
+    "toro4_hllc_0000000.0000000.csv",
+    "toro4_hllc_0000000.0120000.csv",
+    "toro4_hllc_ex_0000000.0000000.csv",
+    "toro4_hllc_ex_0000000.0120000.csv",
+    "toro4_roe_0000000.0000000.csv",
+    "toro4_roe_0000000.0120000.csv",
+    "toro4_roe_ex_0000000.0000000.csv",
+    "toro4_roe_ex_0000000.0120000.csv"]
+}
