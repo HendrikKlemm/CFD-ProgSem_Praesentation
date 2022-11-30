@@ -1,0 +1,133 @@
+ ============================================================
+                           C F D F V
+ ============================================================
+
+   Solution of the two-dimensional Euler Equations using an
+              unstructured finite volume solver
+
+   This program may be used under the conditions of the GPL
+
+   Created at the Institute of Aerodynamics and Gas Dynamics
+            at the University of Stuttgart, Germany
+                http://www.iag.uni-stuttgart.de
+
+ ============================================================
+
+ ------------------------------------------------------------
+  Reading Parameter File:
+ | Reading from file "toro4_roe.ini":
+ |                     Stationary |                                 F | *CUSTOM | 
+ ------------------------------------------------------------
+ Initializing IO:
+ |                       FileName |                         toro4_roe | *CUSTOM | 
+ |                 IOTimeInterval |                       0.12000E-01 | *CUSTOM | 
+ |                 IOIterInterval |                       0.10000E+09 | *CUSTOM | 
+ |                   OutputFormat |                                 3 | *CUSTOM | 
+
+ -[Constants]------------------------------------------------
+ | Using Euler equations.
+ |                          gamma |                       0.14000E+01 | *CUSTOM | 
+ |                              R |                       0.28700E+03 | DEFAULT | 
+ |                   FluxFunction |                                 2 | *CUSTOM | 
+ |                     CalcSource |                                 F | DEFAULT | 
+
+ -[Boundary Conditions]--------------------------------------
+ |                            nBC |                                 2 | *CUSTOM | 
+ |                         BCtype |                               101 | *CUSTOM | 
+|      BC Type: Slipwall
+ |                         BCtype |                               401 | *CUSTOM | 
+|      BC Type: Outflow
+ -[Mesh]-----------------------------------------------------
+ |                       Meshtype |                                 1 | *CUSTOM | 
+ |   Mesh type is CARTESIAN
+ |                        nElemsX |                               100 | *CUSTOM | 
+ |                        nElemsY |                                 1 | *CUSTOM | 
+ |                             X0 |         Real array of size (   2) | *CUSTOM | 
+    0.000000    0.000000
+ |                           Xmax |         Real array of size (   2) | *CUSTOM | 
+    1.000000    0.010000
+ |                    nBCsegments |      Integer array of size (   4) | *CUSTOM |     1    1    1    1
+ |                     MeshBCtype |                               101 | *CUSTOM | 
+ |                     MeshBCtype |                               401 | *CUSTOM | 
+ |                     MeshBCtype |                               101 | *CUSTOM | 
+ |                     MeshBCtype |                               401 | *CUSTOM | 
+ |Bottom Side:
+ |  # of BCs:            1
+ |  BC Type:          101
+ |  BC Range:     1 -   100
+ |Right Side:
+ |  # of BCs:            1
+ |  BC Type:          401
+ |  BC Range:     1 -     1
+ |Top Side:
+ |  # of BCs:            1
+ |  BC Type:          101
+ |  BC Range:     1 -   100
+ |Left Side:
+ |  # of BCs:            1
+ |  BC Type:          401
+ |  BC Range:     1 -     1
+  ... done.
+ -[Initial Conditions]---------------------------------------
+ |                         ICtype |                                 2 | *CUSTOM | 
+ |                      ExactFunc |                                 5 | *CUSTOM | 
+  Initial Condition with exact function #  5
+ |                RP_1D_interface |                       0.50000E+00 | *CUSTOM | 
+  Position of interface for 1D Riemann Problem:    0.50000
+ |                      StateLeft |         Real array of size (   4) | *CUSTOM | 
+    1.000000    0.000000    0.000000    0.010000
+ |                     StateRight |         Real array of size (   4) | *CUSTOM | 
+    1.000000    0.000000    0.000000 1000.000000
+
+ -[SpaceDisc]------------------------------------------------
+ |                   SpatialOrder |                                 1 | *CUSTOM | 
+   Order of spatial discretization:  1
+
+ -[TimeDisc]------------------------------------------------
+ |                            CFL |                       0.99000E+00 | *CUSTOM | 
+ |                            DFL |                       0.90000E+00 | DEFAULT | 
+ |                     TimeStep1D |                                 T | *CUSTOM | 
+ |                      TimeOrder |                                 1 | *CUSTOM | 
+ |                       implicit |                                 F | *CUSTOM | 
+ |                      nRKStages |                                 1 | *CUSTOM | 
+ |   time stepping scheme: Euler time stepping
+ |  Transient Problem
+ |                        MaxIter |                             15000 | *CUSTOM | 
+ |                           tEnd |                       0.12000E-01 | *CUSTOM | 
+ | Start Time:    0.0000000000000000     
+ ------------------------------------------------------------
+  Setting Initial Condition:
+  ...done.
+ ------------------------------------------------------------
+  Initializing Analyse Module:
+ |                  ExactSolution |                                 T | *CUSTOM | 
+ |                       CalcWing |                                 F | DEFAULT | 
+  ...done.
+------------------------------------------------------------------------------------------------------------------------------------
+ THE FOLLOWING INI-FILE PARAMETERS WERE IGNORED:
+ |- mesh:
+ |- const:
+ |- discretization:
+ |- boundaries:
+ |- fileio:
+------------------------------------------------------------------------------------------------------------------------------------
+ ------------------------------------------------------------
+  Writing Initial Condition to Disk:
+       ... done.
+ ------------------------------------------------------------
+  Starting Computation:
+  Initial Time Step:    2.6458862949330038E-004
+ ------------------------------------------------------------
+  Time limit reached -  computation complete!
+  Final time      :    1.2000000000000000E-002
+  Iteration number:           65
+  Writing final state to disk...
+ ------------------------------------------------------------
+ Error Analysis at t =    0.01200
+                          rho              v1              v2               p
+ L_1       :    2.1264957E-01   7.4857402E-01   0.0000000E+00   1.6275384E+01
+ L_2       :    6.3473737E-01   2.1059543E+00   0.0000000E+00   3.8012987E+01
+ L_inf     :    3.3287711E+00   1.6694055E+01   0.0000000E+00   3.1162296E+02
+ ------------------------------------------------------------
+ Computation Time :      0.00307600 s
+ ------------------------------------------------------------
