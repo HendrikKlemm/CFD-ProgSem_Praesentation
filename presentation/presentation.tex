@@ -226,6 +226,62 @@
 
 \end{frame}
 
+
+
+\begin{frame}
+	\frametitle{Schwache Form - Lösung des Oberflächenintegrals}
+	\begin{itemize}
+		\item Numerische Lösung des Oberflächenintegrals $\Rightarrow$ Rand eines Kontrollvolumens besteht aus stückweise glatten Elementen.
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[width=0.7\linewidth]{Cells.JPG}
+		\caption{KV mit stückweise glatten Kanten}
+	\end{figure}
+\end{frame}
+
+
+\subsection{Flussberechnung}
+
+\begin{frame}
+	\frametitle{Flussbrechnung in mehreren Dimensionen}
+	\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+		\begin{column}{0.55\textwidth} % Left column width
+			\textbf{Vorgehen}
+			\vspace*{0.3cm}
+			\begin{enumerate}
+				\item Diskretisierung des Rechengebiets
+				\item Transformation der Zustände in ein lokales Koordinatensystem
+				\item Berechnung des numerischen Flusses (1D Riemann Problem)
+				\item Rücktransformation in globales Koordinatensystem
+			\end{enumerate}
+			\vspace*{1cm}
+			Die Transformation ist nur zulässig, wenn das Problem Rotationsinvariant ist.
+		\end{column}
+		\begin{column}{0.4\textwidth} % Right column width
+			\begin{equation}
+				\mathbb{T} = \begin{pmatrix}
+					1 & 0 & 0 & 0\\
+					0 & n_1 & n_2 & 0 \\
+					0 & -n_2 & n_1 & 0 \\
+					0 & 0   & 0 & 1
+					\end{pmatrix}
+			\end{equation}
+
+			\begin{equation}
+				\mathbb{T}^{-1} = \begin{pmatrix}
+					1 & 0 & 0 & 0\\
+					0 & n_1 & -n_2 & 0 \\
+					0 & n_2 & n_1 & 0 \\
+					0 & 0   & 0 & 1
+					\end{pmatrix}
+			\end{equation}
+		\end{column}
+	\end{columns}
+
+
+\end{frame}	
+
+
 %------------------------------------------------
 
 \begin{frame}
