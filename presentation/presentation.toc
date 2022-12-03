@@ -1,5 +1,6 @@
 \beamer@sectionintoc {1}{Grundlagen}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Schwache Form}{3}{0}{1}
+<<<<<<< HEAD
 \beamer@subsectionintoc {1}{2}{Flussberechnung}{5}{0}{1}
 \beamer@subsectionintoc {1}{3}{Blocks}{9}{0}{1}
 \beamer@subsectionintoc {1}{4}{Columns}{10}{0}{1}
@@ -8,3 +9,12 @@
 \beamer@subsectionintoc {2}{2}{Figure}{12}{0}{2}
 \beamer@sectionintoc {3}{Mathematics}{13}{0}{3}
 \beamer@sectionintoc {4}{Referencing}{18}{0}{4}
+=======
+\beamer@subsectionintoc {1}{2}{Blocks}{8}{0}{1}
+\beamer@subsectionintoc {1}{3}{Columns}{9}{0}{1}
+\beamer@sectionintoc {2}{Ergebnisse}{10}{0}{2}
+\beamer@subsectionintoc {2}{1}{Table}{10}{0}{2}
+\beamer@subsectionintoc {2}{2}{Figure}{11}{0}{2}
+\beamer@sectionintoc {3}{Mathematics}{12}{0}{3}
+\beamer@sectionintoc {4}{Referencing}{17}{0}{4}
+>>>>>>> 2a7d80ce6552cd179a923bcc03de9a4f736567d4
