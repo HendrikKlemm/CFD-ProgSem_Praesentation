@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.9)  3 DEC 2022 13:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.9)  3 DEC 2022 13:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1159,7 +1159,7 @@ Overfull \vbox (0.88766pt too high) detected at line 276
 [5
 
 ]
-<Images//SineWaveO1AUSMD_1600x1600.png, id=218, 1379.1525pt x 757.83125pt>
+<Images//SineWaveO1AUSMD_1600x1600.png, id=219, 1379.1525pt x 757.83125pt>
 File: Images//SineWaveO1AUSMD_1600x1600.png Graphic file (type png)
 <use Images//SineWaveO1AUSMD_1600x1600.png>
 Package pdftex.def Info: Images//SineWaveO1AUSMD_1600x1600.png  used on input l
@@ -1167,75 +1167,87 @@ ine 285.
 (pdftex.def)             Requested size: 303.3395pt x 166.67714pt.
  [6
 
- <./Images//SineWaveO1AUSMD_1600x1600.png (PNG copy)>] [7
+ <./Images//SineWaveO1AUSMD_1600x1600.png (PNG copy)>]
+<Images//gausspulse_collage.png, id=245, 2068.72874pt x 1166.85938pt>
+File: Images//gausspulse_collage.png Graphic file (type png)
+<use Images//gausspulse_collage.png>
+Package pdftex.def Info: Images//gausspulse_collage.png  used on input line 294
+.
+(pdftex.def)             Requested size: 303.3395pt x 171.08649pt.
+
+Overfull \vbox (6.4414pt too high) detected at line 294
+ []
+
+[7
+
+ <./Images//gausspulse_collage.png>] [8
 
 ]
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 332.
- [8
+(Font)              scaled to size 10.95pt on input line 341.
+ [9
 
-] [9
+] [10
 
 ]
-<Images//creodocs_logo.pdf, id=372, 833.50496pt x 170.09146pt>
+<Images//creodocs_logo.pdf, id=399, 833.50496pt x 170.09146pt>
 File: Images//creodocs_logo.pdf Graphic file (type pdf)
 <use Images//creodocs_logo.pdf>
-Package pdftex.def Info: Images//creodocs_logo.pdf  used on input line 369.
+Package pdftex.def Info: Images//creodocs_logo.pdf  used on input line 378.
 (pdftex.def)             Requested size: 346.67653pt x 70.74495pt.
-
-[10
+ [11
 
  <./Images//creodocs_logo.pdf>]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3
-95.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 4
+04.
 
 (C:\Users\Hendrik\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-[11
+[12
 
 ]
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 413.
- [12
+(Font)              scaled to size 10.95pt on input line 422.
+ [13
 
-] [13
+] [14
 
 ]
 \openout4 = `presentation.vrb'.
 
- (presentation.vrb) [14
+ (presentation.vrb) [15
 
-] [15
+] [16
 
 ]
 LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 4
-59.
+68.
 
 (C:\Users\Hendrik\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omspcr.fd
 File: omspcr.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 459.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 468.
 
-[16
+[17
 
 ]
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 479.
+(Font)              scaled to size 9.0pt on input line 488.
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/it' will be
-(Font)              scaled to size 9.0pt on input line 479.
- [17
+(Font)              scaled to size 9.0pt on input line 488.
+ [18
 
  <C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/tex/latex/beamer/beamericonart
-icle.pdf>] [18
+icle.pdf>] [19
 
 ]
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 524.
+(Font)              scaled to size 24.88pt on input line 533.
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 524.
- [19
+(Font)              scaled to size 17.28pt on input line 533.
+ [20
 
 ]
 \tf@nav=\write6
@@ -1248,20 +1260,14 @@ LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
 \openout8 = `presentation.snm'.
 
  (presentation.aux)
-
-Package rerunfilecheck Warning: File `presentation.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `presentation.out':
-(rerunfilecheck)             Before: D59FF8EF6B08F3DC39ED820175513350;474
-(rerunfilecheck)             After:  0FE601D09BA0ADC6209AAEBF0C2BA097;856.
+Package rerunfilecheck Info: File `presentation.out' has not changed.
+(rerunfilecheck)             Checksum: 42CA47C4A149EC8277F39BFE3E19A14A;857.
  ) 
 Here is how much of TeX's memory you used:
- 22933 strings out of 478659
- 462221 string characters out of 2844973
- 696689 words of memory out of 3000000
- 40452 multiletter control sequences out of 15000+600000
+ 22945 strings out of 478659
+ 462525 string characters out of 2844973
+ 696682 words of memory out of 3000000
+ 40461 multiletter control sequences out of 15000+600000
  427150 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,122p,456b,917s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1282,9 +1288,9 @@ rams/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Hendrik/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Hendri
 k/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/H
 endrik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on presentation.pdf (19 pages, 438205 bytes).
+Output written on presentation.pdf (20 pages, 840280 bytes).
 PDF statistics:
- 790 PDF objects out of 1000 (max. 8388607)
- 50 named destinations out of 1000 (max. 500000)
- 533 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 817 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 538 words of extra memory for PDF output out of 10000 (max. 10000000)
 
