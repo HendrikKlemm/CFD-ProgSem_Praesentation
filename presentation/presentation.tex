@@ -104,7 +104,7 @@
 \usepackage[default]{opensans} % Use the Open Sans font for sans serif text
 %\usepackage[default]{FiraSans} % Use the Fira Sans font for sans serif text
 %\usepackage[default]{lato} % Use the Lato font for sans serif text
-
+\usepackage{amsmath,amsfonts,amssymb}
 %----------------------------------------------------------------------------------------
 %	SELECT INNER THEME
 %----------------------------------------------------------------------------------------
@@ -310,10 +310,10 @@
 		\begin{column}{0.6\textwidth} % Left column width
 			Der Raumoperator ergibt sich zu
 			\begin{equation}
-				\mathrm{U}_{i,t} = R_i \approx -\frac{1}{V_i} \sum\limits_{e_{ij}}^{} |e_{ij}| \mathbb{T}^{-1} g(\mathbb{T}\mathrm{U}_i,\: \mathbb{T}\mathrm(U)_j; \: [1,0]^T)
+				\mathrm{U}_{i,t} = R_i \approx -\frac{1}{V_i} \sum\limits_{e_{ij}}^{} |e_{ij}| \mathbb{T}^{-1} \mathbf{g}(\mathbb{T}\mathrm{U}_i,\: \mathbb{T}\mathrm(U)_j; \: [1,0]^\intercal)
 			\end{equation}
 		
-			mit dem approximierten numerischen Fluss $g$. Dieser wird im lokalen Koordinatensystem ermittelt.
+			mit dem approximierten numerischen Fluss $\mathbf{g}$. Dieser wird im lokalen Koordinatensystem ermittelt.
 			
 		
 			Das FV - Verfahren
@@ -343,28 +343,6 @@
 
 \subsection{Vergleich verschiedener Riemannlöser}
 \begin{frame}
-	\frametitle{Fehler zur exakten Lösung}
-	\begin{figure}
-		\includegraphics[width=0.9\linewidth]{Toro3Toro4.png}
-		%\caption{Fehler zur exakten Lösung}
-	\end{figure}
-	
-
-\end{frame}
-
-
-\begin{frame}
-	\frametitle{Fehler zur exakten Lösung}
-	\begin{figure}
-		\includegraphics[width=0.9\linewidth]{ErrorToExactSolution_God_Steger_AUSMD_transparent.png}
-		%\caption{Fehler zur exakten Lösung}
-	\end{figure}
-	
-
-\end{frame}
-
-
-\begin{frame}
 	\frametitle{Vergleich verschiedener Riemann Löser}
 	\framesubtitle{TORO3 Testcase} % Optional subtitle
 	
@@ -386,6 +364,32 @@
 			\caption{Rechenzeit und Diskretisierungsfehler verschiedener Riemann Löser}
 	\end{table}
 \end{frame}
+
+
+\begin{frame}
+	\frametitle{TORO3 - TORO4 Druck}
+	\framesubtitle{Mit AUSMD Flussberechnung; $t=0,012 \mathrm{s}$}
+	\begin{figure}
+		\includegraphics[width=0.9\linewidth]{Toro3Toro4.png}
+		%\caption{Fehler zur exakten Lösung}
+	\end{figure}
+	
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Fehler zur exakten Lösung; $t=0,012 \mathrm{s}$}
+	\begin{figure}
+		\includegraphics[width=0.9\linewidth]{ErrorToExactSolution_God_Steger_AUSMD_transparent.png}
+		%\caption{Fehler zur exakten Lösung}
+	\end{figure}
+	
+
+\end{frame}
+
+
+
 
 
 
@@ -444,12 +448,13 @@
  \section{Lessons learned}
 
  \begin{frame}
- 	\frametitle{Figure}
+ 	\frametitle{Lessons learned}
 
 	\begin{itemize}
 		\item Schwache Formulierung der Transportgleichung erlaubt die Abbildung von Unstetigkeiten
 		\item Numerische Lösung $\Rightarrow$ Rand des KV muss aus stückweise glatten Elementen bestehen
 		\item Bei rotationsinvarianten Problemen kann die Flussberechnung in einem lokalen Koordinatensystem eindimensional erfolgen
+		\item Bei kontinuierlichen Lösungen erhöht eine Gitterverfeinerung die Genauigkeit
 	\end{itemize}
 % 	\begin{figure}
 % 		\includegraphics[width=0.8\linewidth]{creodocs_logo.pdf}
@@ -464,14 +469,43 @@
 
 \begin{frame}[plain] % The optional argument 'plain' hides the headline and footline
 	 	\begin{center}
-		{\Huge The End}
 		
 		\bigskip\bigskip % Vertical whitespace
 		
-		{\LARGE Questions? Comments?}
+		{\Huge Vielen Dank für die Aufmerksamkeit!}
 	\end{center}
  \end{frame}
 
 %----------------------------------------------------------------------------------------
+\begin{frame}[plain] % The optional argument 'plain' hides the headline and footline
+	\begin{center}
+   
+   \bigskip\bigskip % Vertical whitespace
+   
+   {\LARGE Backup}
+\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{TORO3 - TORO4 Dichte}
+	\framesubtitle{ Mit AUSMD Flussberechnung}
+	\begin{figure}
+		\includegraphics[width=0.9\linewidth]{Toro3Toro4_density.png}
+		%\caption{Fehler zur exakten Lösung}
+	\end{figure}
+	
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Stoß Approximation mit feinerem Gitter}
+	%\framesubtitle{ Mit AUSMD Flussberechnung}
+	\begin{figure}
+		\includegraphics[width=0.9\linewidth]{stoss.jpg}
+		%\caption{Fehler zur exakten Lösung}
+	\end{figure}
+	
+
+\end{frame}
 
 \end{document} 

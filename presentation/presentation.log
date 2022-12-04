@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.11.30)  4 DEC 2022 16:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.11.30)  4 DEC 2022 17:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -998,55 +998,55 @@ Overfull \hbox (15.16823pt too wide) in paragraph at lines 340--340
 
 [7
 
- <./Images/local_global.JPG>]
-<Images/Toro3Toro4.png, id=278, 1136.245pt x 526.96875pt>
+ <./Images/local_global.JPG>] [8
+
+]
+<Images/Toro3Toro4.png, id=307, 1136.245pt x 526.96875pt>
 File: Images/Toro3Toro4.png Graphic file (type png)
 <use Images/Toro3Toro4.png>
-Package pdftex.def Info: Images/Toro3Toro4.png  used on input line 353.
+Package pdftex.def Info: Images/Toro3Toro4.png  used on input line 378.
 (pdftex.def)             Requested size: 390.00697pt x 180.8797pt.
- [8
+ [9
 
  <./Images/Toro3Toro4.png>]
-<Images/ErrorToExactSolution_God_Steger_AUSMD_transparent.png, id=306, 1304.875
+<Images/ErrorToExactSolution_God_Steger_AUSMD_transparent.png, id=336, 1304.875
 pt x 649.42625pt>
 File: Images/ErrorToExactSolution_God_Steger_AUSMD_transparent.png Graphic file
  (type png)
 <use Images/ErrorToExactSolution_God_Steger_AUSMD_transparent.png>
 Package pdftex.def Info: Images/ErrorToExactSolution_God_Steger_AUSMD_transpare
-nt.png  used on input line 364.
+nt.png  used on input line 389.
 (pdftex.def)             Requested size: 390.00697pt x 194.10599pt.
- [9
+ [10
 
- <./Images/ErrorToExactSolution_God_Steger_AUSMD_transparent.png>] [10
-
-]
-<Images/SineWaveO1AUSMD_1600x1600.png, id=359, 578.91281pt x 396.7322pt>
+ <./Images/ErrorToExactSolution_God_Steger_AUSMD_transparent.png>]
+<Images/SineWaveO1AUSMD_1600x1600.png, id=365, 578.91281pt x 396.7322pt>
 File: Images/SineWaveO1AUSMD_1600x1600.png Graphic file (type png)
 <use Images/SineWaveO1AUSMD_1600x1600.png>
 Package pdftex.def Info: Images/SineWaveO1AUSMD_1600x1600.png  used on input li
-ne 401.
+ne 405.
 (pdftex.def)             Requested size: 238.34053pt x 163.33319pt.
 
-Overfull \vbox (5.75626pt too high) detected at line 401
+Overfull \vbox (5.75626pt too high) detected at line 405
  []
 
 [11
 
  <./Images/SineWaveO1AUSMD_1600x1600.png>]
-Overfull \vbox (0.88766pt too high) detected at line 426
+Overfull \vbox (0.88766pt too high) detected at line 430
  []
 
 [12
 
 ]
-<Images/gausspulse_collage.png, id=412, 2068.72874pt x 1166.85938pt>
+<Images/gausspulse_collage.png, id=418, 2068.72874pt x 1166.85938pt>
 File: Images/gausspulse_collage.png Graphic file (type png)
 <use Images/gausspulse_collage.png>
-Package pdftex.def Info: Images/gausspulse_collage.png  used on input line 437.
+Package pdftex.def Info: Images/gausspulse_collage.png  used on input line 441.
 
 (pdftex.def)             Requested size: 303.3395pt x 171.08649pt.
 
-Overfull \vbox (6.4414pt too high) detected at line 437
+Overfull \vbox (6.4414pt too high) detected at line 441
  []
 
 [13
@@ -1055,12 +1055,32 @@ Overfull \vbox (6.4414pt too high) detected at line 437
 
 ]
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 473.
-LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 473.
+(Font)              scaled to size 24.88pt on input line 477.
  [15
 
 ]
+LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
+(Font)              scaled to size 17.28pt on input line 487.
+ [16
+
+]
+<Images/Toro3Toro4_density.png, id=521, 1136.245pt x 526.96875pt>
+File: Images/Toro3Toro4_density.png Graphic file (type png)
+<use Images/Toro3Toro4_density.png>
+Package pdftex.def Info: Images/Toro3Toro4_density.png  used on input line 498.
+
+(pdftex.def)             Requested size: 390.00697pt x 180.8797pt.
+ [17
+
+ <./Images/Toro3Toro4_density.png>]
+<Images/stoss.jpg, id=548, 213.04594pt x 88.45547pt>
+File: Images/stoss.jpg Graphic file (type jpg)
+<use Images/stoss.jpg>
+Package pdftex.def Info: Images/stoss.jpg  used on input line 509.
+(pdftex.def)             Requested size: 390.00697pt x 161.93939pt.
+ [18
+
+ <./Images/stoss.JPG>]
 \tf@nav=\write6
 \openout6 = `presentation.nav'.
 
@@ -1070,52 +1090,45 @@ LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 477.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 477.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 511.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 511.
  (./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 477.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 477.
-
-
-Package rerunfilecheck Warning: File `presentation.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `presentation.out':
-(rerunfilecheck)             Before: BD989D907A41ABC8D88383215CC41CE7;679
-(rerunfilecheck)             After:  A01D9D36AE66AFE4F244EBBEDB0DD28D;679.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 511.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 511.
+Package rerunfilecheck Info: File `presentation.out' has not changed.
+(rerunfilecheck)             Checksum: A01D9D36AE66AFE4F244EBBEDB0DD28D;679.
  ) 
 Here is how much of TeX's memory you used:
- 19141 strings out of 482671
- 366932 string characters out of 5955617
+ 19209 strings out of 482671
+ 367833 string characters out of 5955617
  607441 words of memory out of 5000000
- 33740 multiletter control sequences out of 15000+600000
- 552832 words of font info for 79 fonts, out of 8000000 for 9000
+ 33790 multiletter control sequences out of 15000+600000
+ 564341 words of font info for 114 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  58i,15n,67p,779b,917s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Outline0.2.3.12} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Outline0.2.2.10} has been referenced but does not e
-xist, replaced by a fixed one
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_n3lhbv.enc}{/usr/shar
-e/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist
-/fonts/type1/ascender/opensans/OpenSans-Bold.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/ascender/opensans/OpenSans-Regular.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on presentation.pdf (15 pages, 839768 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/opensans/a_n3lhbv.enc}</usr/share/texlive/texmf-di
+st/fonts/type1/ascender/opensans/OpenSans-Bold.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/ascender/opensans/OpenSans-Regular.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
+palatino/uplri8a.pfb>
+Output written on presentation.pdf (18 pages, 936920 bytes).
 PDF statistics:
- 545 PDF objects out of 1000 (max. 8388607)
- 491 compressed objects within 5 object streams
- 43 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 648 PDF objects out of 1000 (max. 8388607)
+ 581 compressed objects within 6 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 
