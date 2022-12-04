@@ -105,6 +105,12 @@
 %\usepackage[default]{FiraSans} % Use the Fira Sans font for sans serif text
 %\usepackage[default]{lato} % Use the Lato font for sans serif text
 \usepackage{amsmath,amsfonts,amssymb}
+%\usepackage[german]{babel}
+\usepackage[ngerman]{babel}
+\usepackage{minted}
+\usepackage{listings}
+\usepackage{datetime}
+\newdateformat{myformat}{\THEDAY{. }\monthname[\THEMONTH], \THEYEAR}
 %----------------------------------------------------------------------------------------
 %	SELECT INNER THEME
 %----------------------------------------------------------------------------------------
@@ -148,12 +154,12 @@
 
 \author[Jannik Schrempp\and Hendrik Klemm]{}%{Capt. James Cook \and Roald Amundsen} % Presenter name(s), the optional parameter can contain a shortened version to appear on the bottom of every slide, while the main parameter will appear on the title slide
 
-\institute[]{University of Stuttgart} %\\ %\smallskip \textit{james@LaTeXTemplates.com}} % Your institution, the optional parameter can be used for the institution shorthand and will appear on the bottom of every slide after author names, while the required parameter is used on the title slide and can include your email address or additional information on separate lines
+\institute[]{University of Stuttgart IAG} %\\ %\smallskip \textit{james@LaTeXTemplates.com}} % Your institution, the optional parameter can be used for the institution shorthand and will appear on the bottom of every slide after author names, while the required parameter is used on the title slide and can include your email address or additional information on separate lines
 
-\date[\today]{Studentenvortrag \\ \today} % Presentation date or conference/meeting name, the optional parameter can contain a shortened version to appear on the bottom of every slide, while the required parameter value is output to the title slide
+\date[\myformat\today]{Studentenvortrag \\ \myformat\today} % Presentation date or conference/meeting name, the optional parameter can contain a shortened version to appear on the bottom of every slide, while the required parameter value is output to the title slide
 
 %----------------------------------------------------------------------------------------
-\titlegraphic{\includegraphics[width=0.8\textwidth,height=.5\textheight]{title_Gausspuls.png}}
+\titlegraphic{\includegraphics[width=0.6\textwidth,height=.5\textheight]{title_Gausspuls.png}}
 \begin{document}
 \newcommand\barbelow[1]{\stackunder[1.2pt]{$#1$}{\rule{.8ex}{.075ex}}}
 %----------------------------------------------------------------------------------------
@@ -198,7 +204,7 @@
 	
 	Finite Differenzen Verfahren
 	\begin{itemize}
-		\item punktweise Approximation (Punkte im Raum)
+		\item Approximation an den Gitterpunkten
 	\end{itemize}
 	\smallskip
 	Finite Elemente Verfahren
@@ -210,7 +216,7 @@
 	Finite Volumen Verfahren
 	\begin{itemize}
 		\item Lösung in Gitterzellen
-		\item Integrale Erhaltung direkt mit dem Verfahren verknüpft
+		\item Wert in der Zelle entpricht integralem Zellenmittelwert
 	\end{itemize}
 
 \end{frame}
@@ -310,7 +316,7 @@
 		\begin{column}{0.6\textwidth} % Left column width
 			Der Raumoperator ergibt sich zu
 			\begin{equation}
-				\mathrm{U}_{i,t} = R_i \approx -\frac{1}{V_i} \sum\limits_{e_{ij}}^{} |e_{ij}| \mathbb{T}^{-1} \mathbf{g}(\mathbb{T}\mathrm{U}_i,\: \mathbb{T}\mathrm(U)_j; \: [1,0]^\intercal)
+				\mathrm{U}_{i,t} = R_i \approx -\frac{1}{V_i} \sum\limits_{e_{ij}}^{} |e_{ij}| \mathbb{T}^{-1} \mathbf{g}(\mathbb{T}\mathrm{U}_i,\: \mathbb{T}\mathrm{U}_j; \: [1,0]^\intercal)
 			\end{equation}
 		
 			mit dem approximierten numerischen Fluss $\mathbf{g}$. Dieser wird im lokalen Koordinatensystem ermittelt.
@@ -358,13 +364,14 @@
 				HLLC & 0,0029 & 2,13E-1 & 6,34E-1 & 3,32 \\
 				Lax-Friedrichs & 0,0023 & 2,60E-1 & 6,99E-1 & 3,45 \\
 				Steger-Warming & 0,0029 & 2,19E-1 & 6,41E-1 & 3,42 \\
-				AUSMD & 0,0026 & 2,12E-1 & 6,31E-1 & 3,31
-				%\bottomrule
+				AUSMD & 0,0026 & 2,12E-1 & 6,31E-1 & 3,31\\
+				\bottomrule
 			\end{tabular}
 			\caption{Rechenzeit und Diskretisierungsfehler verschiedener Riemann Löser}
 	\end{table}
 \end{frame}
 
+\subsection{TORO3 und TORO4 Testcase}
 
 \begin{frame}
 	\frametitle{TORO3 - TORO4 Druck}
@@ -467,12 +474,16 @@
 %	CLOSING SLIDE
 %----------------------------------------------------------------------------------------
 
-\begin{frame}[plain] % The optional argument 'plain' hides the headline and footline
+\begin{frame} % The optional argument 'plain' hides the headline and footline
 	 	\begin{center}
 		
-		\bigskip\bigskip % Vertical whitespace
+		\bigskip \bigskip % Vertical whitespace
 		
-		{\Huge Vielen Dank für die Aufmerksamkeit!}
+		{\Large Vielen Dank für die Aufmerksamkeit!}
+		\begin{figure}
+			\includegraphics[width=0.5\linewidth]{title_Gausspuls.png}
+			%\caption{Gausspuls auf kartesischem Gitter (oben) und unstrukturiertem kreisförmigem Gitter (unten)}
+		\end{figure}
 	\end{center}
  \end{frame}
 
@@ -498,14 +509,54 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Stoß Approximation mit feinerem Gitter}
+	\frametitle{Stoß Approximation mit verschiedenen Gittern}
 	%\framesubtitle{ Mit AUSMD Flussberechnung}
 	\begin{figure}
-		\includegraphics[width=0.9\linewidth]{stoss.jpg}
+		\includegraphics[width=0.5\linewidth]{stoss.jpg}
 		%\caption{Fehler zur exakten Lösung}
 	\end{figure}
 	
 
+\end{frame}
+
+
+
+
+\defverbatim[colored]\lstI{
+\begin{lstlisting}[language=Fortran,basicstyle=\tiny,keywordstyle=\color{red}]
+	DO iSide = 1, nSides
+	aSide => Sides(iSide)%Side
+  ! Extract left state 
+	pvar(:) = aSide%pvar(:)
+  ! rotate it into normal direction
+	pvar_l(RHO) = pvar(RHO)
+	pvar_l(V1)  = aSide%n(1) * pvar(V1) + aSide%n(2) * pvar(V2)
+	pvar_l(V2)  = - aSide%n(2) * pvar(V1) + aSide%n(1) * pvar(V2)
+	pvar_l(P)   = pvar(P)
+  ! Extract right state:
+	pvar(:) = aSide%connection%pvar(:)
+  ! rotate state into normal direction
+	pvar_r(RHO) = pvar(RHO)
+	pvar_r(V1)  = aSide%n(1) * pvar(V1) + aSide%n(2) * pvar(V2)
+	pvar_r(V2)  = - aSide%n(2) * pvar(V1) + aSide%n(1) * pvar(V2)
+	pvar_r(P)   = pvar(P)
+  !-----------------------------------------------------------------------------------------------------------------------------------
+  ! Flux calculation
+	CALL ConvectiveFlux(pvar_l(RHO), pvar_r(RHO), &
+						pvar_l(V1),  pvar_r(V1),  &
+						pvar_l(V2),  pvar_r(V2),  &
+						pvar_l(P),   pvar_r(P),   &
+						flux_local                )
+[...]
+\end{lstlisting}
+}
+
+
+
+
+\begin{frame}[fragile]{Fortran Code}
+	
+	\lstI
 \end{frame}
 
 \end{document} 
