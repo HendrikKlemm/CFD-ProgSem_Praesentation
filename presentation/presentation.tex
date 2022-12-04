@@ -153,7 +153,7 @@
 \date[\today]{Studentenvortrag \\ \today} % Presentation date or conference/meeting name, the optional parameter can contain a shortened version to appear on the bottom of every slide, while the required parameter value is output to the title slide
 
 %----------------------------------------------------------------------------------------
-
+\titlegraphic{\includegraphics[width=0.8\textwidth,height=.5\textheight]{title_Gausspuls.png}}
 \begin{document}
 \newcommand\barbelow[1]{\stackunder[1.2pt]{$#1$}{\rule{.8ex}{.075ex}}}
 %----------------------------------------------------------------------------------------
@@ -161,7 +161,13 @@
 %----------------------------------------------------------------------------------------
 
 \begin{frame}
+	% \vspace{-2cm}
+	% \begin{figure}
+	% 	\includegraphics[width=0.5\linewidth]{title_Gausspuls.png}
+		
+	% \end{figure}
 	\titlepage % Output the title slide, automatically created using the text entered in the PRESENTATION INFORMATION block above
+
 \end{frame}
 
 %----------------------------------------------------------------------------------------
@@ -235,7 +241,7 @@
 
 	\begin{equation}
 		\mathrm{V}_i \mathrm{U}_{i,t} + \oint_{\partial \mathrm{V}_i}{\mathbb{F}^C (\mathrm{U_{RP}})\cdot \mathrm{n} \: dS}=0
-	\end{equation}
+	\end{equation} 
 	
 
 \end{frame}
@@ -334,7 +340,30 @@
 \end{frame}
 %------------------------------------------------
 \section{Ergebnisse}
+
 \subsection{Vergleich verschiedener Riemannlöser}
+\begin{frame}
+	\frametitle{Fehler zur exakten Lösung}
+	\begin{figure}
+		\includegraphics[width=0.9\linewidth]{Toro3Toro4.png}
+		%\caption{Fehler zur exakten Lösung}
+	\end{figure}
+	
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Fehler zur exakten Lösung}
+	\begin{figure}
+		\includegraphics[width=0.9\linewidth]{ErrorToExactSolution_God_Steger_AUSMD_transparent.png}
+		%\caption{Fehler zur exakten Lösung}
+	\end{figure}
+	
+
+\end{frame}
+
+
 \begin{frame}
 	\frametitle{Vergleich verschiedener Riemann Löser}
 	\framesubtitle{TORO3 Testcase} % Optional subtitle

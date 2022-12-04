@@ -5,6 +5,6 @@
 \beamer@subsectionintoc {1}{4}{Raumoperator und Zeitintegration}{7}{0}{1}
 \beamer@sectionintoc {2}{Ergebnisse}{8}{0}{2}
 \beamer@subsectionintoc {2}{1}{Vergleich verschiedener Riemannlöser}{8}{0}{2}
-\beamer@subsectionintoc {2}{2}{Konvergenzordnung des SD SineWave01 Testcase}{9}{0}{2}
-\beamer@subsectionintoc {2}{3}{Validierung mit Gausspuls}{11}{0}{2}
-\beamer@sectionintoc {3}{Lessons learned}{12}{0}{3}
+\beamer@subsectionintoc {2}{2}{Konvergenzordnung des SD SineWave01 Testcase}{11}{0}{2}
+\beamer@subsectionintoc {2}{3}{Validierung mit Gausspuls}{13}{0}{2}
+\beamer@sectionintoc {3}{Lessons learned}{14}{0}{3}
