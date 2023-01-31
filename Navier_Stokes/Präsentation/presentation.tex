@@ -265,11 +265,37 @@
 \begin{frame}
 	\frametitle{Konvergenzordnung}
 
+Es wurden variiert:
+Raumordnung: 1, 2
+$\mu$: 0, 0.01, 0.05, 0.1
+Gitterzahl: 100x100, 200x200, 400x400
 
+Die empirische Konvergenzordnung des Verfahrens ergibt sich zu
+$$n=\frac{log(\frac{E_1}{E_2})}{log(\frac{h_1}{h_2})},$$
+wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstellen.
+
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		Ordnung & $\mu$  & $n_1-Ordnung$& $n_2-Ordnug$& $n_{inf}-Ordnung$\\
+		\hline
+		1 & 0 & 0.980 & 0.980 & 0.968 \\
+		\hline
+		2 & 0 & 1.80 & 1.85 & 1.81 \\
+		\hline
+		1 & 0.01 & 0.964 & 0.979 & 0.752 \\
+		\hline
+		2 & 0.01 & 2.03& 2.02 & 1.71 \\
+		\hline
+		1 & 0.05 & 0.965& 0.962 & 0.866 \\
+		\hline
+		2 & 0.05 &1.97 & 1.87 & 1.51 \\
+		\hline
+		1 & 0.1 & 0.969& 0.972 & 0.911 \\
+		\hline
+		2 & 0.1 & 1.96& 1.81 & 1.45 \\
+		\hline
+		\end{tabular}
 	\end{frame}
-
-
-
 
 \subsection{A2}
 
