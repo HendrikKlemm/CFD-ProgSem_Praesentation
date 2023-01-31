@@ -256,6 +256,7 @@
 	%\framesubtitle{} % Optional subtitle
 	
 %Bild/Video vom SineWave Testcase
+%1. Plot ohne Reibung, 2. Plot mit Reibung, 3. Plot der Differenz
 
 
 \end{frame}
@@ -264,23 +265,9 @@
 \begin{frame}
 	\frametitle{Konvergenzordnung}
 
-% Tabelle mit den empirischen Konvergenzordnungen
-% Unterschied L1,L2,Linf erklären
 
-\end{frame}
+	\end{frame}
 
-
-\begin{frame}
-	\frametitle{Vergleich der Rechenzeit}
-	%\framesubtitle{Mit AUSMD Flussberechnung; $t=0,012 \mathrm{s}$}
-
-	% Formel DFL Bedingung
-	% Tabelle mit den Rechenzeiten
-	% Zeigen, dass die zusätzliche Rechenzeit aus der DFL-Bedingung kommt
-	% Warum t_euler > t_mu=0.001??
-	
-
-\end{frame}
 
 
 
@@ -344,5 +331,79 @@
 
 %----------------------------------------------------------------------------------------\begin{frame}[plain] % The optional argument 'plain' hides the headline and footline
 
+
+	\begin{frame}
+		\frametitle{Anhang}
+		\subtitle{Daten A1}
+	
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			Ordnung & $\mu$ & Gitter & $L_1-Fehler$& $L_2-Fehler$& $L_{inf}-Fehler$\\
+			\hline
+			1 & 0 & 100x100 & 3.36E-3 & 4.26E-3 & 1.11E-2 \\
+			\hline
+			1 & 0 &200x200 &1.71E-3 & 2.17E-3 & 5.73E-3 \\
+			\hline
+			1 & 0 &400x400 &8.67E-4 & 1.10E-3 & 2.93E-3 \\
+			\hline
+			2 & 0 &100x100 &7.97E-5 & 1.13E-4 & 5.16E-4 \\
+			\hline
+			2 & 0 &200x200 &2.04E-5 & 2.80E- & 1.42E-4\\
+			\hline
+			2 & 0 &400x400 &5.86E-6 & 7.78E-6 & 4.05E-5 \\
+			\hline
+			1 & 0.01 &100x100 & 3.19E-3& 4.06E-3 & 1.06E-2 \\
+			\hline
+			1 & 0.01 &200x200 & 1.59E-3& 2.01E-3 & 6.55E-3 \\
+			\hline
+			1 & 0.01 &400x400 & 8.15E-4 & 1.02E-3 & 3.89E-3 \\
+			\hline
+			2 & 0.01 &100x100 & 5.26E-5& 6.79E-5 & 2.61E-4 \\
+			\hline
+			2 & 0.01 &200x200 & 1.25E-5& 1.62E-5 & 7.32E-5 \\
+			\hline
+			2 & 0.01 &400x400 & 3.06E-6& 4.00E-6 & 2.23E-5 \\
+			\hline
+			\end{tabular}
+		\end{frame}
+	
+	\begin{frame}
+		\frametitle{Anhang}
+		\subtitle{Daten A1}
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			Ordnung & $\mu$ & Gitter & $L_1-Fehler$& $L_2-Fehler$& $L_{inf}-Fehler$\\
+			\hline
+			1 & 0.5 &100x100 & 2.98E-3& 3.72E-3 & 1.23E-2 \\
+			\hline
+			1 & 0.5 &200x200 & 1.55E-3& 1.93E-3 &7.00E-3  \\
+			\hline
+			1 & 0.05 &400x400 &7.94E-4 & 9.91E-4 & 3.84E-3 \\
+			\hline
+			2 & 0.05 &100x100 & 5.08E-5& 7.10E-5 & 3.32E-4 \\
+			\hline
+			2 & 0.05 &200x200 & 1.28E-5& 1.90E-5 & 1.16E-4 \\
+			\hline
+			2 & 0.05 &400x400 &3.27E-6 & 5.20E-6 & 4.07E-5 \\
+			\hline
+			1 & 0.1 &100x100 &3.22E-3 & 3.90E-3 & 1.21E-2 \\
+			\hline
+			1 & 0.1 &200x200 & 1.67E-3& 2.02E-3 & 6.73E-3 \\
+			\hline
+			1 & 0.1 &400x400 & 8.53E-4& 1.03E-3 & 3.58E-3 \\
+			\hline
+			2 & 0.1 &100x100 & 5.58E-5& 8.57E-5 & 4.18E-4 \\
+			\hline
+			2 & 0.1 &200x200 & 1.44E-5& 2.42E-5 & 1.52E-4 \\
+			\hline
+			2 & 0.1 &400x400 & 3.70E-6& 6.88E-6 & 5.56E-5 \\
+			\hline
+			\end{tabular}
+			
+	
+	% Tabelle mit den empirischen Konvergenzordnungen
+	% Unterschied L1,L2,Linf erklären
+	
+	\end{frame}
 
 \end{document} 
