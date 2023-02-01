@@ -218,11 +218,29 @@
 	% das v gefällt mir nicht, andere schriftart
 \end{frame}
 
+\begin{frame}
+	\frametitle{Viskoste Flüsse}
+	\begin{center}
+		\begin{figure}
+			\includegraphics[width=0.8\linewidth]{visc_fluesse.png}
+			%\caption{Gausspuls auf kartesischem Gitter (oben) und unstrukturiertem kreisförmigem Gitter (unten)}
+		\end{figure}
+	\end{center}
+% Hier sehen wir, dass wir zusätzlich zu den Größen auch die Ableitungen brauchen. Wie kommen wir also an die Ableitungen? -> Nächste Folie
+\end{frame}
+
 
 \begin{frame}
-	\frametitle{Diskretisierungsverfahren}
-	
-
+	\frametitle{Flussberechnung auf strukturierten Gittern}
+	%Satz von Green liefert Zusammenhang zwischen Volumen- und Oberflächenintegral
+	1. Satz von Green
+	$$\int_{v'} \frac{\partial f}{\partial x} - \frac{\partial g}{\partial y}\,dx =  \oint_{\partial v'} g dx + f dy$$
+	2. Setze $f = u; g = 0$\\
+	3. Integral auflösen
+	$$V'\frac{\partial u}{\partial x} = \vartriangle y (U_{i,j} + U_{i+1,j})$$
+	$$ \Rightarrow \frac{\partial u}{\partial x} = \frac{U_{i,j} + U_{i+1,j}}{\vartriangle  x}$$
+	Analog:
+	$$\frac{\partial u}{\partial y} = \frac{U_{i+\frac{1}{2},j+\frac{1}{2}}+ U_{i+\frac{1}{2},j-\frac{1}{2}}}{\vartriangle y}$$
 
 \end{frame}
 
@@ -432,6 +450,7 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 \begin{frame}
 	\frametitle{Cylinder Testcase}
 	\framesubtitle{Vergleich Auftriebs- und Widerstandsbeiwert}
+	\begin{center}
 	\begin{tabular}{|c|c|c|c|}
 		\hline
 		Rechnung & Rechenzeit [s]& $c_l [-]$  & $c_d [-]$\\
@@ -441,8 +460,9 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 		$\mu = 0.001$& 3229.61 & [-0.8; 0.8] & [0.8; 1.2]\\
 		\hline
 		\end{tabular}
+	\end{center}
 	\begin{figure}
-		\includegraphics[width=0.4\linewidth]{cylinder_visc_cl_cd_graph.png}
+		\includegraphics[width=0.3\linewidth]{cylinder_visc_cl_cd_graph.png}
 		\caption{Verlauf des Auftriebs- und Widerstandbeiwertes über der Iteration für $\mu=0.001$}
 	\end{figure}
 	%plot d_l über phi wär noch geil
