@@ -263,16 +263,19 @@
 
 
 \begin{frame}
-	\frametitle{Konvergenzordnung}
-
-Es wurden variiert:
-Raumordnung: 1, 2
-$\mu$: 0, 0.01, 0.05, 0.1
-Gitterzahl: 100x100, 200x200, 400x400
-
+	\frametitle{SineWave Testcase}
+	\framesubtitle{Konvergenzordnung}
+Raumordnung: \quad 1, 2\\
+$\mu$: \quad \quad \quad \quad \quad \quad \quad 0, 0.01, 0.05, 0.1\\
+Gitterzahl: \quad \quad \quad 100x100, 200x200, 400x400\\ \\ \\
 Die empirische Konvergenzordnung des Verfahrens ergibt sich zu
 $$n=\frac{log(\frac{E_1}{E_2})}{log(\frac{h_1}{h_2})},$$
 wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstellen.
+
+\end{frame}
+\begin{frame}
+	\frametitle{SineWave Testcase}
+	\framesubtitle{Konvergenzordnung}
 
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline
@@ -295,7 +298,81 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 		2 & 0.1 & 1.96& 1.81 & 1.45 \\
 		\hline
 		\end{tabular}
+
+%Frage: Warum entspricht die empirische Konvergenzordnung nicht 1 bzw 2? Warum ist die geringer?
 	\end{frame}
+
+\begin{frame}
+	\frametitle{SineWave Testcase}
+	\framesubtitle{Rechenzeit}
+	\begin{table}[h]
+	\begin{tabular*}{0.4\textwidth}{@{\extracolsep{\fill}}|c|c|c|c|}
+		\hline
+		O & $\mu$ & Gitter & Rechenzeit \\
+		\hline
+		1 & 0 & 100x100 & 1.99\\
+		\hline
+		1 & 0.01 & 100x100 & 1.46\\
+		\hline
+		1 & 0.05 & 100x100 & 6.67\\
+		\hline
+		1 & 0.1 & 100x100 & 14.0\\
+		\hline
+		1 & 0 & 200x200 & 10.18\\
+		\hline
+		1 & 0.01 & 200x200 & 21.99\\
+		\hline
+		1 & 0.05 & 200x200 & 102.76\\
+		\hline
+		1 & 0.1 & 200x200 & 226.78\\
+		\hline
+		1 & 0 & 400x400 & 91.5\\
+		\hline
+		1 & 0.01 & 400x1400 & 387.41\\
+		\hline
+		1 & 0.05 & 1400x400 & 1906.77\\
+		\hline
+		1 & 0.1 & 400x1400 & 3263.09\\
+		\hline
+	\end{tabular*}
+	\hspace{0.05\textwidth}
+	\begin{tabular*}{0.4\textwidth}{@{\extracolsep{\fill}}|c|c|c|c|}
+		\hline
+		O & $\mu$ & Gitter & Rechenzeit\\
+		\hline
+		2 & 0 & 100x100 & 4.74\\
+		\hline
+		2 & 0.01 & 100x100 & 4.93\\
+		\hline
+		2 & 0.05 & 100x100 & 24.55\\
+		\hline
+		2 & 0.1 & 100x100 & 46.84\\
+		\hline
+		2 & 0 & 200x200 & 33.05\\
+		\hline
+		2 & 0.01 & 200x200 & 74.19\\
+		\hline
+		2 & 0.05 & 200x200 & 368.89\\
+		\hline
+		2 & 0.1 & 200x200 & 737.04\\
+		\hline
+		2 & 0 & 400s400 & 262.63 \\
+		\hline
+		2 & 0 & 400s400 & 1205.84 \\
+		\hline
+		2 & 0 & 400s400 & 6123.78 \\
+		\hline
+		2 & 0 & 400s400 & 11998.56 \\
+		\hline
+		\end{tabular*}
+	\end{table}
+
+	%todo: beide tabellen nebeneinander statt untereinander
+
+%learnings 1. teilweise ist die ns mit geringem mu schneller als euler?!
+%          2. Rechenzeit steigt wie zu erwarten mit der Gitteranzahl
+%          3. Rechenzeit steigt mit mu um den faktor mu (DFL-Bedingung)
+\end{frame}
 
 \subsection{A2}
 
