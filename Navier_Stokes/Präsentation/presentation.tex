@@ -200,8 +200,26 @@
 %------------------------------------------------
 \subsection{Navier-Stokes Gleichungen}
 
-\begin{frame}
 
+\begin{frame}
+	\frametitle{Navier-Stokes Gleichungen}
+	Eulergleichungen sind Vereinfachung der Navier-Stokes Gleichungen für $Re \rightarrow \infty$\\
+	\begin{equation}
+	\begin{split}
+		\rho_t + \nabla\cdot (\rho v) &= 0\\
+		(\rho v)_t + \nabla\cdot ((\rho v)\circ v) + \nabla p &=\nabla \tau\\
+		e_t + \nabla \cdot (v(e+p)) &=\nabla \cdot (\tau \cdot v) - \nabla \cdot q \\
+	\end{split}
+\end{equation}
+	Zusätzliche Terme:\\
+	Reibungstensor $\tau = \mu (\nabla v + (\nabla v)^T) - \frac{2}{3}\mu (\nabla \cdot v)$\\
+	Wärmeleitung $q = -\frac{c_p\mu}{Pr}\nabla T$\\
+
+	% das v gefällt mir nicht, andere schriftart
+\end{frame}
+
+
+\begin{frame}
 	\frametitle{Diskretisierungsverfahren}
 	
 
