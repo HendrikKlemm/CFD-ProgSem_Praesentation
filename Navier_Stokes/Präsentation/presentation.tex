@@ -430,6 +430,8 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 
 \end{frame}
 \begin{frame}
+	\frametitle{Cylinder Testcase}
+	\framesubtitle{Vergleich Auftriebs- und Widerstandsbeiwert}
 	\begin{tabular}{|c|c|c|c|}
 		\hline
 		Rechnung & Rechenzeit [s]& $c_l [-]$  & $c_d [-]$\\
@@ -439,11 +441,12 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 		$\mu = 0.001$& 3229.61 & [-0.8; 0.8] & [0.8; 1.2]\\
 		\hline
 		\end{tabular}
-	Reibungsbehaftete Rechnung Ergebnisse ($\mu=0.001$, $t=100s$)
 	\begin{figure}
-		\includegraphics[width=0.5\linewidth]{cylinder_visc_cl_cd_graph.png}
-		\caption{Verlauf des Auftriebs- und Widerstandbeiwertes über der Iteration}
+		\includegraphics[width=0.4\linewidth]{cylinder_visc_cl_cd_graph.png}
+		\caption{Verlauf des Auftriebs- und Widerstandbeiwertes über der Iteration für $\mu=0.001$}
 	\end{figure}
+	%plot d_l über phi wär noch geil
+	% warum entsteht auftrieb? -> Zirkulationserhaltung Satz von Thompson
 	%mu einheiten!
 \end{frame}
 
