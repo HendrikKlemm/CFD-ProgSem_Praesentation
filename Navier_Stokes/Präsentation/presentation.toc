@@ -9,4 +9,4 @@
 \beamer@subsectionintoc {2}{1}{A1}{10}{0}{2}
 \beamer@subsectionintoc {2}{2}{A2}{14}{0}{2}
 \beamer@subsectionintoc {2}{3}{A3}{16}{0}{2}
-\beamer@sectionintoc {3}{Lessons learned}{17}{0}{3}
+\beamer@sectionintoc {3}{Lessons learned}{18}{0}{3}

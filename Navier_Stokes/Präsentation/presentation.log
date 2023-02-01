@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.9)  1 FEB 2023 09:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.9)  1 FEB 2023 10:04
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1235,6 +1235,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 165.
 LaTeX Info: Redefining \pageref on input line 165.
 LaTeX Info: Redefining \nameref on input line 165.
+ (presentation.out) (presentation.out)
 \@outlinefile=\write7
 \openout7 = `presentation.out'.
 
@@ -1304,18 +1305,18 @@ Dictionary: translator-theorem-dictionary, Language: English
 \c@mv@tabular=\count415
 \c@mv@boldtabular=\count416
 \c@lstlisting=\count417
-
-No file presentation.nav.
+ (presentation.nav)
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 165.
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
 65.
+
 (C:\Users\Hendrik\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 179.
-<Images//title_Gausspuls.png, id=25, 380.17032pt x 344.03531pt>
+<Images//title_Gausspuls.png, id=69, 380.17032pt x 344.03531pt>
 File: Images//title_Gausspuls.png Graphic file (type png)
 <use Images//title_Gausspuls.png>
 Package pdftex.def Info: Images//title_Gausspuls.png  used on input line 179.
@@ -1329,18 +1330,18 @@ LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
 [1
 
 {C:/Users/Hendrik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Images//
-title_Gausspuls.png>]
-No file presentation.toc.
-[2
+title_Gausspuls.png>] (presentation.toc) [2
 
 ]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 219
 .
- (C:\Users\Hendrik\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+
+(C:\Users\Hendrik\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 219
 .
+
 (C:\Users\Hendrik\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1359,7 +1360,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [9
 
 ]
-<Images//SineWave_viscous.png, id=277, 1129.21875pt x 568.37344pt>
+<Images//SineWave_viscous.png, id=331, 1129.21875pt x 568.37344pt>
 File: Images//SineWave_viscous.png Graphic file (type png)
 <use Images//SineWave_viscous.png>
 Package pdftex.def Info: Images//SineWave_viscous.png  used on input line 283.
@@ -1392,22 +1393,43 @@ Overfull \hbox (19.08115pt too wide) in alignment at lines 397--397
 
 ] [15
 
-] [16
+]
+<Images//cylinder_pressure.png, id=488, 1149.5447pt x 495.35063pt>
+File: Images//cylinder_pressure.png Graphic file (type png)
+<use Images//cylinder_pressure.png>
+Package pdftex.def Info: Images//cylinder_pressure.png  used on input line 431.
 
-] [17
+(pdftex.def)             Requested size: 346.67653pt x 149.38486pt.
+ [16
+
+ <./Images//cylinder_pressure.png>]
+<Images//cylinder_visc_cl_cd_graph.png, id=514, 991.705pt x 757.83125pt>
+File: Images//cylinder_visc_cl_cd_graph.png Graphic file (type png)
+<use Images//cylinder_visc_cl_cd_graph.png>
+Package pdftex.def Info: Images//cylinder_visc_cl_cd_graph.png  used on input l
+ine 448.
+(pdftex.def)             Requested size: 216.67201pt x 165.56703pt.
+
+Overfull \vbox (17.43652pt too high) detected at line 448
+ []
+
+[17
+
+ <./Images//cylinder_visc_cl_cd_graph.png (PNG copy)>] [18
 
 ]
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 455.
+(Font)              scaled to size 14.4pt on input line 478.
 File: Images//title_Gausspuls.png Graphic file (type png)
 <use Images//title_Gausspuls.png>
-Package pdftex.def Info: Images//title_Gausspuls.png  used on input line 455.
+Package pdftex.def Info: Images//title_Gausspuls.png  used on input line 478.
 (pdftex.def)             Requested size: 216.67201pt x 196.08116pt.
- [18
-
-] [19
+ [19
 
 ] [20
+
+]
+[21
 
 ]
 \tf@nav=\write8
@@ -1420,23 +1442,17 @@ Package pdftex.def Info: Images//title_Gausspuls.png  used on input line 455.
 \openout10 = `presentation.snm'.
 
  (presentation.aux)
-
-Package rerunfilecheck Warning: File `presentation.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `presentation.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  4E16B52D9F60DE8DE5C18C8712B618DE;1009.
+Package rerunfilecheck Info: File `presentation.out' has not changed.
+(rerunfilecheck)             Checksum: 4E16B52D9F60DE8DE5C18C8712B618DE;1009.
  ) 
 Here is how much of TeX's memory you used:
- 28814 strings out of 478659
- 573348 string characters out of 2844973
- 900397 words of memory out of 3000000
- 46222 multiletter control sequences out of 15000+600000
+ 28967 strings out of 478659
+ 576473 string characters out of 2844973
+ 900498 words of memory out of 3000000
+ 46363 multiletter control sequences out of 15000+600000
  426031 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,122p,1094b,602s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,16n,122p,1094b,716s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{
 C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/opensans/a_n3lhb
 v.enc}<C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/type1/ascender/open
@@ -1448,9 +1464,9 @@ ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/H
 endrik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Us
 ers/Hendrik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
 
-Output written on presentation.pdf (20 pages, 334534 bytes).
+Output written on presentation.pdf (21 pages, 507932 bytes).
 PDF statistics:
- 616 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 89 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 689 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
+ 187 words of extra memory for PDF output out of 10000 (max. 10000000)
 

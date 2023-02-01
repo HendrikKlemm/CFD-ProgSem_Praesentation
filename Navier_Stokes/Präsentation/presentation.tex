@@ -412,16 +412,39 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 	% vergleich der GS-Dicke bei x=2
 	% ggf. Verlauf der GS-Dicke über x
 \end{frame}
-	
+
 
 \subsection{A3}
 \begin{frame}
 \frametitle{Cylinder Testcase}
+\framesubtitle{Überblick}
+\begin{figure}
+	\includegraphics[width=0.8\linewidth]{cylinder_pressure.png}
+	\caption{Cylinder Testcase ohne Reibungseinfluss (links) und mit Reibungseinfluss (rechts)}
+\end{figure}
+
 
 %Bild Euler vs. NS
 
 % Phänomene erklren
 
+\end{frame}
+\begin{frame}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Rechnung & Rechenzeit [s]& $c_l [-]$  & $c_d [-]$\\
+		\hline
+		$\mu = 0$ & 150.83 & 0.001063 & 0.323603\\
+		\hline
+		$\mu = 0.001$& 3229.61 & [-0.8; 0.8] & [0.8; 1.2]\\
+		\hline
+		\end{tabular}
+	Reibungsbehaftete Rechnung Ergebnisse ($\mu=0.001$, $t=100s$)
+	\begin{figure}
+		\includegraphics[width=0.5\linewidth]{cylinder_visc_cl_cd_graph.png}
+		\caption{Verlauf des Auftriebs- und Widerstandbeiwertes über der Iteration}
+	\end{figure}
+	%mu einheiten!
 \end{frame}
 
 %------------------------------------------------
