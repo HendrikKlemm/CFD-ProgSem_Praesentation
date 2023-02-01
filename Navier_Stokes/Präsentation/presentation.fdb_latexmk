@@ -1,8 +1,14 @@
 # Fdb version 3
-["pdflatex"] 1675232705 "d:/Luft- und Raumfahrttechnik/lrt_master/CFD-ProgSem_Praesentation/Navier_Stokes/Präsentation/presentation.tex" "presentation.pdf" "presentation" 1675232705
+["pdflatex"] 1675234463 "d:/Luft- und Raumfahrttechnik/lrt_master/CFD-ProgSem_Praesentation/Navier_Stokes/Präsentation/presentation.tex" "presentation.pdf" "presentation" 1675234463
   "C:/Users/Hendrik/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1644429157 9770914 14c4304dcf30e01d48f816c364e95597 ""
   "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr10.tfm" 1136765053 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmss10.tfm" 1136765053 1316 b636689f1933f24d1294acdf6041daaa ""
+  "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/type1/ascender/opensans/OpenSans-Regular.pfb" 1561402454 100962 9a830a6477c526fbf4a9696e1678f3f0 ""
+  "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247593067 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247593067 35752 024fb6c41858982481f6968b5fc26508 ""
+  "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247593067 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb" 1136849748 52665 661b1e6b26edb5f50dd491f8a701cb57 ""
+  "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb" 1136849748 50022 90249cba7e3e4e9845f80328d6f9bd13 ""
   "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/tex/generic/babel/babel.sty" 1638206364 147900 18d47b4bbea226e862cd49f17ede0392 ""
   "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/tex/generic/babel/txtbabel.def" 1638206364 5233 a89961f969f72563cb59411e9dc4ae8e ""
@@ -75,6 +81,7 @@
   "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/tex/latex/amscls/amsthm.sty" 1591020009 12594 0d51ac3a545aaaa555021326ff22a6cc ""
   "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amsfonts.sty" 1358197772 5949 3f3fd50a8cc94c3d4cbf4fc66cd3df1c ""
   "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amssymb.sty" 1358197772 13829 94730e64147574077f8ecfea9bb69af4 ""
+  "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd" 1358197772 961 d02606146ba5601b5645f987c92e6193 ""
   "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty" 1636824341 2222 da905dc1db75412efd2d8f67739f0596 ""
   "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty" 1636824342 4173 bc0410bcccdff806d6132d3c1ef35481 ""
   "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty" 1636824342 87648 07fbb6e9169e00cb2a2f40b31b2dbf3c ""
@@ -199,9 +206,10 @@
   "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1636284872 56029 3f7889dab51d620aa43177c391b7b190 ""
   "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1623002090 4902 efb3d66683a2da2a232f71e3a571a899 ""
   "C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/tex/latex/xstring/xstring.sty" 1673962217 123 a302f2c651a95033260db60e51527ae8 ""
-  "d:/Luft- und Raumfahrttechnik/lrt_master/CFD-ProgSem_Praesentation/Navier_Stokes/Präsentation/presentation.tex" 1675232696 17840 0b3cd00dcad67f0b9345b6f635e80526 ""
-  "presentation.aux" 1675232705 34 3985256e7290058c681f74d7a3565a19 ""
-  "presentation.tex" 1675232696 17840 0b3cd00dcad67f0b9345b6f635e80526 ""
+  "Images//SineWave_viscous.png" 1675234054 77644 de68c4ef267d53e17c80ffe4f5588fdb ""
+  "d:/Luft- und Raumfahrttechnik/lrt_master/CFD-ProgSem_Praesentation/Navier_Stokes/Präsentation/presentation.tex" 1675234450 17834 9f588f52cda9dd27bee1e5a930ff5934 ""
+  "presentation.aux" 1675234462 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "presentation.tex" 1675234450 17834 9f588f52cda9dd27bee1e5a930ff5934 ""
   (generated)
   "presentation.log"
   "presentation.pdf"
