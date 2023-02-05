@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.2)  5 FEB 2023 20:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.2)  5 FEB 2023 21:05
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1308,7 +1308,7 @@ File: Images/CL_CD.png Graphic file (type png)
 Package pdftex.def Info: Images/CL_CD.png  used on input line 640.
 (pdftex.def)             Requested size: 346.67653pt x 197.76031pt.
 
-Overfull \vbox (123.299pt too high) detected at line 640
+Overfull \vbox (92.87904pt too high) detected at line 640
  []
 
 [15
@@ -1409,7 +1409,7 @@ hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on presentation.pdf (25 pages, 901682 bytes).
+Output written on presentation.pdf (25 pages, 901464 bytes).
 PDF statistics:
  831 PDF objects out of 1000 (max. 8388607)
  745 compressed objects within 8 object streams
