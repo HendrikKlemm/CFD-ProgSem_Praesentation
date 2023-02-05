@@ -1,0 +1,7 @@
+ set title "Residual plot"
+ set logscale y
+ plot "blasius_analysis.csv" using 1:3 title "rho" with lines,\
+ "blasius_analysis.csv" using 1:4 title "m1" with lines,\
+ "blasius_analysis.csv" using 1:5 title "m2" with lines,\
+ "blasius_analysis.csv" using 1:6 title "e" with lines
+ pause -1
