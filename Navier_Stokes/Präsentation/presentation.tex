@@ -161,7 +161,7 @@
 \date[\myformat\today]{Studentenvortrag \\ \myformat\today} % Presentation date or conference/meeting name, the optional parameter can contain a shortened version to appear on the bottom of every slide, while the required parameter value is output to the title slide
 
 %----------------------------------------------------------------------------------------
-\titlegraphic{\includegraphics[width=0.6\textwidth,height=.5\textheight]{Navier.png}}
+\titlegraphic{\includegraphics[width=1\textwidth,height=0.5\textheight]{Title.png}}
 \begin{document}
 \newcommand\barbelow[1]{\stackunder[1.2pt]{$#1$}{\rule{.8ex}{.075ex}}}
 %----------------------------------------------------------------------------------------
@@ -278,17 +278,17 @@
 	\frametitle{Viskose Zeitschrittbedingung}
 	Parabolischer Charakter der Reibungsterme beeinflussen die Stabilität des numerischen Verfahrens stark
 	$\Rightarrow$ DFL-Bedingung.
-	\newline
+	\vspace*{1cm}
 
 
 	\begin{columns}
-		\column{0.5 \textwidth}
+		\column{0.45 \textwidth}
 		DFL-Bedingung:
 		\begin{equation}
 			\Delta t \leq \frac{\min(\rho)\Delta x^2}{2\mu}
 		\end{equation} 
 
-		\column{0.5 \textwidth}
+		\column{0.45 \textwidth}
 		CFL-Bedingung
 		\begin{equation}
 			\Delta t \leq \frac{\Delta x}{\max (|v|+c)}
@@ -594,13 +594,19 @@
 \subsection{Zylinderumströmung}
 \begin{frame}
 \frametitle{Cylinder Testcase}
-\framesubtitle{Überblick}
+\framesubtitle{Viskoser Fall oben - Euler Fall unten}
+\vspace*{-0.2cm}
 \begin{figure}
-	\includegraphics[width=1\linewidth]{cylinder_pressure_zoom.png}
-	\caption{Cylinder Testcase ohne Reibungseinfluss (links) und mit Reibungseinfluss (rechts)}
+	\includegraphics[width=0.8\linewidth]{Cylinder_Wirbelstrasse.png}
+	%\caption{Cylinder Testcase ohne Reibungseinfluss (links) und mit Reibungseinfluss (rechts)}
 %Auffallend: 1. Karmansche Wirbelstraße 
 \end{figure}
-
+\vspace*{-0.5cm}
+\begin{figure}
+	\includegraphics[width=0.8\linewidth]{Cylinder_euler_1.png}
+	%\caption{Cylinder Testcase ohne Reibungseinfluss (links) und mit Reibungseinfluss (rechts)}
+%Auffallend: 1. Karmansche Wirbelstraße 
+\end{figure}
 
 %Bild Euler vs. NS
 
@@ -610,25 +616,51 @@
 \begin{frame}
 	\frametitle{Cylinder Testcase}
 	\framesubtitle{Vergleich Auftriebs- und Widerstandsbeiwert}
-	\begin{center}
-	\begin{tabular}{|c|c|c|c|}
-		\hline
-		Rechnung & Rechenzeit [s]& $c_l [-]$  & $c_d [-]$\\
-		\hline
-		$\mu = 0$ & 150.83 & 0.001063 & 0.323603\\
-		\hline
-		$\mu = 0.001$& 3229.61 & [-0.8; 0.8] & [0.8; 1.2]\\
-		\hline
-		\end{tabular}
-	\end{center}
+
 	\begin{figure}
-		\includegraphics[width=0.35\linewidth]{cylinder_visc_cl_cd_graph.png}
-		\caption{Verlauf des Auftriebs- und Widerstandbeiwertes über der Iteration für $\mu=0.001$}
+		\includegraphics[width=0.8\linewidth]{CL_CD.png}
+		\caption{Verlauf des Auftriebs- und Widerstandbeiwertes über der Iteration für $\mu=0.002$}
 	\end{figure}
+
+
+	\begin{table}
+		\begin{tabular}{l l l l l}
+			\toprule
+			Rechnung & Rechenzeit [s]& $c_l [-]$  & $c_d [-]$\\
+			\midrule
+			$\mu = 0$ & 150.83 & 0.001063 & 0.323603\\
+			$\mu = 0.001$& 3229.61 & [-0.8; 0.8] & [0.8; 1.2]\\
+			\bottomrule
+		\end{tabular}
+		\caption{Rechenzeit und Ordnung bei O1}
+	\end{table}
 % Reibung ist jetzt dabei -> Reibungswiderstand
 % führt zu instationärer Strömung -> Karmansche Wirbelstraße
 % Wirbel erzeugen durch Zirkulationserhaltung Auftrieb
 \end{frame}
+
+
+\begin{frame}
+	\frametitle{Cylinder Testcase}
+	\framesubtitle{Vergleich Auftriebs- und Widerstandsbeiwert}
+
+	\begin{table}
+		\begin{tabular}{l l l l l}
+			\toprule
+			Rechnung & Rechenzeit [s]& $c_l [-]$  & $c_d [-]$\\
+			\midrule
+			$\mu = 0$ & 150.83 & 0.001063 & 0.323603\\
+			$\mu = 0.001$& 3229.61 & [-0.8; 0.8] & [0.8; 1.2]\\
+			\bottomrule
+		\end{tabular}
+		\caption{Rechenzeit und Ordnung bei O1}
+	\end{table}
+% Reibung ist jetzt dabei -> Reibungswiderstand
+% führt zu instationärer Strömung -> Karmansche Wirbelstraße
+% Wirbel erzeugen durch Zirkulationserhaltung Auftrieb
+\end{frame}
+
+
 
 %------------------------------------------------
 
