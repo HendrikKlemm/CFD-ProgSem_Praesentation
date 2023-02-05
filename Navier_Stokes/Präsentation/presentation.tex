@@ -207,13 +207,27 @@
 	\begin{equation}
 	\begin{split}
 		\rho_t + \nabla\cdot (\rho v) &= 0\\
-		(\rho v)_t + \nabla\cdot ((\rho v)\circ v) + \nabla p &=\nabla \tau\\
-		e_t + \nabla \cdot (v(e+p)) &=\nabla \cdot (\tau \cdot v) - \nabla \cdot q \\
+		(\rho v)_t + \nabla\cdot ((\rho v)\circ v) + \nabla p &= \textcolor{red}{\nabla \tau} \\
+		e_t + \nabla \cdot (v(e+p)) &= \textcolor{red}{\nabla \cdot (\tau \cdot v) - \nabla \cdot q}  \\
 	\end{split}
 \end{equation}
+
+
+
+	
+
 	Zusätzliche Terme:\\
 	Reibungstensor $\tau = \mu (\nabla v + (\nabla v)^T) - \frac{2}{3}\mu (\nabla \cdot v)$\\
 	Wärmeleitung $q = -\frac{c_p\mu}{Pr}\nabla T$\\
+	\newline
+
+	Analog zu den Eulergleichungen können auch die Navier-Stokes-Gleichungen in die Flussformulierung gebracht werden.
+	\begin{equation}
+		\mathrm{U}_t + \nabla \cdot \mathbb{F}^C (\mathrm{U}) = \nabla \cdot \mathbb{F}^D(\mathrm{U}, \nabla \mathrm{U})
+	\end{equation}
+
+
+
 
 	% das v gefällt mir nicht, andere schriftart
 \end{frame}
@@ -257,131 +271,79 @@
 \end{frame}
 
 
-\begin{frame}
-	\frametitle{Flussberechnung auf strukturierten Gittern}
-	%Satz von Green liefert Zusammenhang zwischen Volumen- und Oberflächenintegral
-	1. Satz von Green
-	$$\int_{v'} \frac{\partial f}{\partial x} - \frac{\partial g}{\partial y}\,dx =  \oint_{\partial v'} g dx + f dy$$
-	2. Setze $f = u; g = 0$\\
-	3. Integral auflösen
-	$$V'\frac{\partial u}{\partial x} = \vartriangle y (U_{i,j} + U_{i+1,j})$$
-	$$ \Rightarrow \frac{\partial u}{\partial x} = \frac{U_{i,j} + U_{i+1,j}}{\vartriangle  x}$$
-	Analog:
-	$$\frac{\partial u}{\partial y} = \frac{U_{i+\frac{1}{2},j+\frac{1}{2}}+ U_{i+\frac{1}{2},j-\frac{1}{2}}}{\vartriangle y}$$
 
-\end{frame}
-
-%---------------------------------------------
-\subsection{Flussberechnung}
-
-
-\begin{frame}
-	\frametitle{Flussbrechung auf strukturierten Gittern}
-	\begin{columns}
-
-	\column{0.45\textwidth}
-		Bei der Gradientenbestimmung werden Werte an den Seitenmittelpunkten verwendet.
-		Diese werden wie folgt berechnet:
-		$$U_{i+\frac{1}{2}, j + \frac{1}{2}} = \frac{1}{4} (U_{i,j}+U_{i,j+1}+U_{i+1,j}+U_{i+1,j+1}) $$
-		$$U_{i+\frac{1}{2}, j + \frac{1}{2}} = \frac{1}{4} (U_{i,j}+U_{i,j+1}+U_{i+1,j}+U_{i+1,j+1})$$
-	\column{0.45\textwidth}
-
-		\begin{figure}
-			\includegraphics[width=0.7\linewidth]{Mittellung_ueber_Zellen.png}
-		\end{figure}
-	\end{columns}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Flussberechnung auf unstrukturierten Gittern}
-	Im Gegensatz zum strukturierten Gitter müssen auf unstrukturierten Gittern auch die nicht abgeleiteten Größen
-	durch Mittelung der Nachbarzellen bestimmt werden.
-	\begin{columns}
-	\column{0.45\textwidth}
-		\begin{figure}
-			\includegraphics[width=0.8\linewidth]{unstruct_flux.png}
-		\end{figure}
-
-
-	\column{0.45\textwidth}
-		\begin{align}
-			(v_1)_a &= \frac{(v_1)_{i,a}+(v_1)_{j,a}}{2} \\
-			(v_2)_a &= \frac{(v_2)_{i,a}+(v_2)_{j,a}}{2} \\
-			(\mu_2)_a &= \frac{(\mu)_{i,a}+(\mu)_{j,a}}{2} \\
-			(\lambda)_a &= \frac{(\lambda)_{i,a}+(\lambda)_{j,a}}{2}
-		\end{align}
-	\end{columns}
-
-\end{frame}	
-
-
-\begin{frame}
-	\frametitle{Flussberechnung auf unstrukturierten Gittern}
-	Die Gradienten können auf den Zellseiten nicht effizient mit dem Satz von Green bestimmt werden.
-	Lösung mit dem empirischen Ansatz:
-
-	\begin{equation}
-		\nabla U_a = (\overline{\nabla U})_{i,j} - \biggl\lbrack(\overline{\nabla U})_{i,j} \cdot 
-		\vec{t_{i,j}}- \biggl(\frac{\partial U }{\partial l}\biggr)_{i,j}  \biggr\rbrack \vec{t_{i,j}}
-	\end{equation}
-
-
-	Dabei ist $\vec{t_{i,j}} = \frac{\vec{r}_{i,j}}{l_{i,j}}$ der Vektor, zu dem der Gradient
-	\begin{equation}
-		(\overline{\nabla U})_{i,j} = 0.5 (\nabla U_i+\nabla U_j)
-	\end{equation}
-	verwendet wird. Tangential zu $\vec{t_{i,j}}$ wird die Richtungsableitung 
-
-	\begin{equation}
-		\biggl(\frac{\partial U }{\partial l}\biggr)_{i,j} = \frac{U_j-U_i}{l_{i,j}}
-	\end{equation}
-	verwendet.
-
-\end{frame}
 
 \subsection{viskose Zeitschrittbedingung}
 \begin{frame}
 	\frametitle{Viskose Zeitschrittbedingung}
-	Parabolischer Charakter der Reibungsterme beeinflussen die Stabilität des numerischen Verfahrens stark.
-	$\Rightarrow$ DFL-Bedingung
-	\begin{equation}
-		\Delta t \leq \frac{\min(\rho)\Delta x^2}{2\mu}
-	\end{equation} 
+	Parabolischer Charakter der Reibungsterme beeinflussen die Stabilität des numerischen Verfahrens stark
+	$\Rightarrow$ DFL-Bedingung.
+	\newline
+
+
+	\begin{columns}
+		\column{0.5 \textwidth}
+		DFL-Bedingung:
+		\begin{equation}
+			\Delta t \leq \frac{\min(\rho)\Delta x^2}{2\mu}
+		\end{equation} 
+
+		\column{0.5 \textwidth}
+		CFL-Bedingung
+		\begin{equation}
+			\Delta t \leq \frac{\Delta x}{\max (|v|+c)}
+		\end{equation}
+			
+		
+	\end{columns}
+
+
+
+	% Die viskosen spektralen Radien sind dabei:
+	% \begin{align}
+	% 	\Lambda_x = \max\biggl(\frac{4}{3}, \frac{\gamma}{\mathrm{Pr}} \biggr) \frac{\mu}{\rho} \frac{S_x^2}{S} \\
+	% 	\Lambda_y = \max\biggl(\frac{4}{3}, \frac{\gamma}{\mathrm{Pr}} \biggr) \frac{\mu}{\rho} \frac{S_y^2}{S}
+	% \end{align}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{viskose Zeitschrittbedingung - projizierte Flächen}
 
 	Viskose Zeitschritt wird über die projezierten Längen $S_x$ und $S_y$ der Gitterelemente berechnet.
-
 	\begin{equation}
 		\Delta t_{\mathrm{visc}} = \mathrm{DFL}\frac{S}{4(\Lambda_x+\Lambda_y)}
 	\end{equation}
 
-	Die viskosen spektralen Radien sind dabei:
+	\begin{columns}
+		\column{0.6 \textwidth}
+			Die viskosen spektralen Radien sind dabei:
+			\begin{align}
+				\Lambda_x = \max\biggl(\frac{4}{3}, \frac{\gamma}{\mathrm{Pr}} \biggr) \frac{\mu}{\rho} \frac{S_x^2}{S} \\
+				\Lambda_y = \max\biggl(\frac{4}{3}, \frac{\gamma}{\mathrm{Pr}} \biggr) \frac{\mu}{\rho} \frac{S_y^2}{S}
+			\end{align}
+		\column{0.4 \textwidth}
 
-	\begin{align}
-		\Lambda_x = \max\biggl(\frac{4}{3}, \frac{\gamma}{\mathrm{Pr}} \biggr) \frac{\mu}{\rho} \frac{S_x^2}{S} \\
-		\Lambda_y = \max\biggl(\frac{4}{3}, \frac{\gamma}{\mathrm{Pr}} \biggr) \frac{\mu}{\rho} \frac{S_y^2}{S}
-	\end{align}
+		\begin{figure}
+			\includegraphics[width = \textwidth]{Zeitdiskretisierung.png}
+		\end{figure}
+	\end{columns}
+
 \end{frame}
-
 
 %------------------------------------------------
 \section{Ergebnisse}
 
 \subsection{SineWave Testcase}
-\begin{frame}
-	\frametitle{SineWave Testcase}
-	\begin{figure}
-		\includegraphics[width=0.8\linewidth]{SineWave_viscous.png}
-		\caption{SineWave Testcase VelocityMagnitude für $\mu=0.2$ und $t=0.1s$, sowie $t=2.5s$}
-	\end{figure}
-	% hier konnte optisch kein Unterschied gesehen werden bei verschiedenen Viskositäten, hier aber der Vergleich nach t=0.1s und t=2.5s
-	% Interessant: Die Farben werden intensiver, also größere/kleinere Werte! Hätte ich anders erwartet.
-
-\end{frame}
 
 
 \begin{frame}
 	\frametitle{SineWave Testcase}
 	\framesubtitle{Konvergenzordnung}
+	Es wird ein sinusförmiger Dichtepuls transporiert.
+	\newline
+
+	
 Raumordnung: \quad 1, 2\\
 $\mu$: \quad \quad \quad \quad \quad \quad \quad 0, 0.01, 0.05, 0.1\\
 Gitterzahl: \quad \quad \quad 100x100, 200x200, 400x400\\ \\ \\
@@ -392,6 +354,24 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 % Ausführliche Ergebnisse im Anhang
 %
 \end{frame}
+
+
+
+
+\begin{frame}
+	\frametitle{SineWave Testcase}
+
+	\begin{figure}
+		\includegraphics[width=0.8\linewidth]{SineWave_viscous.png}
+		\caption{SineWave Testcase VelocityMagnitude für $\mu=0.2$ und $t=0.1s$, sowie $t=2.5s$}
+	\end{figure}
+	% hier konnte optisch kein Unterschied gesehen werden bei verschiedenen Viskositäten, hier aber der Vergleich nach t=0.1s und t=2.5s
+	% Interessant: Die Farben werden intensiver, also größere/kleinere Werte! Hätte ich anders erwartet.
+
+\end{frame}
+
+
+
 \begin{frame}
 	\frametitle{SineWave Testcase}
 	\framesubtitle{Konvergenzordnung}
@@ -638,6 +618,94 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 			\hline
 			\end{tabular}
 		\end{frame}
+	
+	
+	\begin{frame}
+		\frametitle{Flussberechnung auf strukturierten Gittern}
+		%Satz von Green liefert Zusammenhang zwischen Volumen- und Oberflächenintegral
+		1. Satz von Green
+		$$\int_{v'} \frac{\partial f}{\partial x} - \frac{\partial g}{\partial y}\,dx =  \oint_{\partial v'} g dx + f dy$$
+		2. Setze $f = u; g = 0$\\
+		3. Integral auflösen
+		$$V'\frac{\partial u}{\partial x} = \vartriangle y (U_{i,j} + U_{i+1,j})$$
+		$$ \Rightarrow \frac{\partial u}{\partial x} = \frac{U_{i,j} + U_{i+1,j}}{\vartriangle  x}$$
+		Analog:
+		$$\frac{\partial u}{\partial y} = \frac{U_{i+\frac{1}{2},j+\frac{1}{2}}+ U_{i+\frac{1}{2},j-\frac{1}{2}}}{\vartriangle y}$$
+		
+	\end{frame}
+	
+	%---------------------------------------------
+	\subsection{Flussberechnung}
+	
+	
+	\begin{frame}
+		\frametitle{Flussbrechung auf strukturierten Gittern}
+		\begin{columns}
+			
+			\column{0.45\textwidth}
+			Bei der Gradientenbestimmung werden Werte an den Seitenmittelpunkten verwendet.
+			Diese werden wie folgt berechnet:
+			$$U_{i+\frac{1}{2}, j + \frac{1}{2}} = \frac{1}{4} (U_{i,j}+U_{i,j+1}+U_{i+1,j}+U_{i+1,j+1}) $$
+			$$U_{i+\frac{1}{2}, j + \frac{1}{2}} = \frac{1}{4} (U_{i,j}+U_{i,j+1}+U_{i+1,j}+U_{i+1,j+1})$$
+			\column{0.45\textwidth}
+			
+			\begin{figure}
+				\includegraphics[width=0.7\linewidth]{Mittellung_ueber_Zellen.png}
+			\end{figure}
+		\end{columns}
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Flussberechnung auf unstrukturierten Gittern}
+		Im Gegensatz zum strukturierten Gitter müssen auf unstrukturierten Gittern auch die nicht abgeleiteten Größen
+		durch Mittelung der Nachbarzellen bestimmt werden.
+		\begin{columns}
+			\column{0.45\textwidth}
+			\begin{figure}
+				\includegraphics[width=0.8\linewidth]{unstruct_flux.png}
+			\end{figure}
+			
+			
+			\column{0.45\textwidth}
+			\begin{align}
+			(v_1)_a &= \frac{(v_1)_{i,a}+(v_1)_{j,a}}{2} \\
+			(v_2)_a &= \frac{(v_2)_{i,a}+(v_2)_{j,a}}{2} \\
+			(\mu_2)_a &= \frac{(\mu)_{i,a}+(\mu)_{j,a}}{2} \\
+			(\lambda)_a &= \frac{(\lambda)_{i,a}+(\lambda)_{j,a}}{2}
+			\end{align}
+		\end{columns}
+		
+	\end{frame}	
+	
+	
+	\begin{frame}
+		\frametitle{Flussberechnung auf unstrukturierten Gittern}
+		Die Gradienten können auf den Zellseiten nicht effizient mit dem Satz von Green bestimmt werden.
+		Lösung mit dem empirischen Ansatz:
+		
+		\begin{equation}
+		\nabla U_a = (\overline{\nabla U})_{i,j} - \biggl\lbrack(\overline{\nabla U})_{i,j} \cdot 
+		\vec{t_{i,j}}- \biggl(\frac{\partial U }{\partial l}\biggr)_{i,j}  \biggr\rbrack \vec{t_{i,j}}
+		\end{equation}
+		
+		
+		Dabei ist $\vec{t_{i,j}} = \frac{\vec{r}_{i,j}}{l_{i,j}}$ der Vektor, zu dem der Gradient
+		\begin{equation}
+		(\overline{\nabla U})_{i,j} = 0.5 (\nabla U_i+\nabla U_j)
+		\end{equation}
+		verwendet wird. Tangential zu $\vec{t_{i,j}}$ wird die Richtungsableitung 
+		
+		\begin{equation}
+		\biggl(\frac{\partial U }{\partial l}\biggr)_{i,j} = \frac{U_j-U_i}{l_{i,j}}
+		\end{equation}
+		verwendet.
+		
+	\end{frame}
+	
+	
+	
+	
+	
 	
 	\begin{frame}
 		\frametitle{Anhang}
