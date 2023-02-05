@@ -161,7 +161,7 @@
 \date[\myformat\today]{Studentenvortrag \\ \myformat\today} % Presentation date or conference/meeting name, the optional parameter can contain a shortened version to appear on the bottom of every slide, while the required parameter value is output to the title slide
 
 %----------------------------------------------------------------------------------------
-\titlegraphic{\includegraphics[width=0.6\textwidth,height=.5\textheight]{title_Gausspuls.png}}
+\titlegraphic{\includegraphics[width=0.6\textwidth,height=.5\textheight]{Navier.png}}
 \begin{document}
 \newcommand\barbelow[1]{\stackunder[1.2pt]{$#1$}{\rule{.8ex}{.075ex}}}
 %----------------------------------------------------------------------------------------
@@ -185,7 +185,7 @@
 % The table of contents outputs the sections and subsections that appear in your presentation, specified with the standard \section and \subsection commands. You may either display all sections and subsections on one slide with \tableofcontents, or display each section at a time on subsequent slides with \tableofcontents[pausesections]. The latter is useful if you want to step through each section and mention what you will discuss.
 
 \begin{frame}
-	\frametitle{Presentation Overview} % Slide title, remove this command for no title
+	\frametitle{Überblick} % Slide title, remove this command for no title
 	
 	\tableofcontents % Output the table of contents (all sections on one slide)
 	%\tableofcontents[pausesections] % Output the table of contents (break sections up across separate slides)
@@ -203,7 +203,7 @@
 
 \begin{frame}
 	\frametitle{Navier-Stokes Gleichungen}
-	Eulergleichungen sind Vereinfachung der Navier-Stokes Gleichungen für $Re \rightarrow \infty$\\
+	Eulergleichungen sind Vereinfachung der Navier-Stokes Gleichungen für $\mathrm{Re} \rightarrow \infty$\\
 	\begin{equation}
 	\begin{split}
 		\rho_t + \nabla\cdot (\rho v) &= 0\\
@@ -216,6 +216,33 @@
 	Wärmeleitung $q = -\frac{c_p\mu}{Pr}\nabla T$\\
 
 	% das v gefällt mir nicht, andere schriftart
+\end{frame}
+
+\begin{frame}
+	\frametitle{Navier-Stokes Flüsse}
+	\begin{columns}
+	\column{0.5\textwidth}
+	konvektive Flüsse:
+	\begin{itemize}
+		\item hyperbolisch
+		\item Transport von Information
+	\end{itemize}
+
+	\begin{figure}
+			\includegraphics[width=0.8\linewidth]{konvekitv.png}
+	\end{figure}
+	\column{0.5\textwidth}
+	viskose Flüsse:
+	\begin{itemize}
+		\item parabolisch
+		\item Dissipation und Wärmeleitung
+	\end{itemize}
+
+	\begin{figure}
+			\includegraphics[width=0.8\linewidth]{Viskos.png}
+			%\caption{Gausspuls auf kartesischem Gitter (oben) und unstrukturiertem kreisförmigem Gitter (unten)}
+		\end{figure}
+	\end{columns}
 \end{frame}
 
 \begin{frame}
@@ -245,33 +272,101 @@
 \end{frame}
 
 %---------------------------------------------
-\subsection{Schwache Form}
+\subsection{Flussberechnung}
+
+
+\begin{frame}
+	\frametitle{Flussbrechung auf strukturierten Gittern}
+	\begin{columns}
+
+	\column{0.45\textwidth}
+		Bei der Gradientenbestimmung werden Werte an den Seitenmittelpunkten verwendet.
+		Diese werden wie folgt berechnet:
+		$$U_{i+\frac{1}{2}, j + \frac{1}{2}} = \frac{1}{4} (U_{i,j}+U_{i,j+1}+U_{i+1,j}+U_{i+1,j+1}) $$
+		$$U_{i+\frac{1}{2}, j + \frac{1}{2}} = \frac{1}{4} (U_{i,j}+U_{i,j+1}+U_{i+1,j}+U_{i+1,j+1})$$
+	\column{0.45\textwidth}
+
+		\begin{figure}
+			\includegraphics[width=0.7\linewidth]{Mittellung_ueber_Zellen.png}
+		\end{figure}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Flussberechnung auf unstrukturierten Gittern}
+	Im Gegensatz zum strukturierten Gitter müssen auf unstrukturierten Gittern auch die nicht abgeleiteten Größen
+	durch Mittelung der Nachbarzellen bestimmt werden.
+	\begin{columns}
+	\column{0.45\textwidth}
+		\begin{figure}
+			\includegraphics[width=0.8\linewidth]{unstruct_flux.png}
+		\end{figure}
+
+
+	\column{0.45\textwidth}
+		\begin{align}
+			(v_1)_a &= \frac{(v_1)_{i,a}+(v_1)_{j,a}}{2} \\
+			(v_2)_a &= \frac{(v_2)_{i,a}+(v_2)_{j,a}}{2} \\
+			(\mu_2)_a &= \frac{(\mu)_{i,a}+(\mu)_{j,a}}{2} \\
+			(\lambda)_a &= \frac{(\lambda)_{i,a}+(\lambda)_{j,a}}{2}
+		\end{align}
+	\end{columns}
+
+\end{frame}	
 
 
 \begin{frame}
 	\frametitle{Flussberechnung auf unstrukturierten Gittern}
-	
+	Die Gradienten können auf den Zellseiten nicht effizient mit dem Satz von Green bestimmt werden.
+	Lösung mit dem empirischen Ansatz:
 
-\end{frame}	
+	\begin{equation}
+		\nabla U_a = (\overline{\nabla U})_{i,j} - \biggl\lbrack(\overline{\nabla U})_{i,j} \cdot 
+		\vec{t_{i,j}}- \biggl(\frac{\partial U }{\partial l}\biggr)_{i,j}  \biggr\rbrack \vec{t_{i,j}}
+	\end{equation}
 
-\subsection{?}
+
+	Dabei ist $\vec{t_{i,j}} = \frac{\vec{r}_{i,j}}{l_{i,j}}$ der Vektor, zu dem der Gradient
+	\begin{equation}
+		(\overline{\nabla U})_{i,j} = 0.5 (\nabla U_i+\nabla U_j)
+	\end{equation}
+	verwendet wird. Tangential zu $\vec{t_{i,j}}$ wird die Richtungsableitung 
+
+	\begin{equation}
+		\biggl(\frac{\partial U }{\partial l}\biggr)_{i,j} = \frac{U_j-U_i}{l_{i,j}}
+	\end{equation}
+	verwendet.
+
+\end{frame}
+
+\subsection{viskose Zeitschrittbedingung}
 \begin{frame}
 	\frametitle{Viskose Zeitschrittbedingung}
+	Parabolischer Charakter der Reibungsterme beeinflussen die Stabilität des numerischen Verfahrens stark.
+	$\Rightarrow$ DFL-Bedingung
+	\begin{equation}
+		\Delta t \leq \frac{\min(\rho)\Delta x^2}{2\mu}
+	\end{equation} 
 
+	Viskose Zeitschritt wird über die projezierten Längen $S_x$ und $S_y$ der Gitterelemente berechnet.
+
+	\begin{equation}
+		\Delta t_{\mathrm{visc}} = \mathrm{DFL}\frac{S}{4(\Lambda_x+\Lambda_y)}
+	\end{equation}
+
+	Die viskosen spektralen Radien sind dabei:
+
+	\begin{align}
+		\Lambda_x = \max\biggl(\frac{4}{3}, \frac{\gamma}{\mathrm{Pr}} \biggr) \frac{\mu}{\rho} \frac{S_x^2}{S} \\
+		\Lambda_y = \max\biggl(\frac{4}{3}, \frac{\gamma}{\mathrm{Pr}} \biggr) \frac{\mu}{\rho} \frac{S_y^2}{S}
+	\end{align}
 \end{frame}
-
-\subsection{?}
-\begin{frame}
-	\frametitle{Randbedingungen}
-
-\end{frame}
-
 
 
 %------------------------------------------------
 \section{Ergebnisse}
 
-\subsection{A1}
+\subsection{SineWave Testcase}
 \begin{frame}
 	\frametitle{SineWave Testcase}
 	\begin{figure}
@@ -397,7 +492,7 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 %          3. Rechenzeit steigt mit mu um den faktor mu (DFL-Bedingung)
 \end{frame}
 
-\subsection{A2}
+\subsection{Blasius Boundary Layer}
 \begin{frame}
 	\frametitle{laminare Grenzschicht auf einer ebenen Platte}
 	\begin{center}
@@ -433,7 +528,7 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 \end{frame}
 
 
-\subsection{A3}
+\subsection{Zylinderumströmung}
 \begin{frame}
 \frametitle{Cylinder Testcase}
 \framesubtitle{Überblick}
@@ -576,6 +671,13 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 	% Tabelle mit den empirischen Konvergenzordnungen
 	% Unterschied L1,L2,Linf erklären
 	
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Blasius-Gleichung}
+
+		Die Blasius-Gleichung ist eine Vereinfachung der Navier-Stokes Gleichungen und beschreibt die stationäre, inkompressible Strömung auf einer 2D Ebenen Platte auf der sich eine Grenzschicht ausbildet.
+		$$f''(\theta)+\frac{1}{2} \\ f'(\theta)\cdot\int_{0}^{\theta} f(t) \,dt $$
 	\end{frame}
 
 \end{document} 
