@@ -1,0 +1,4 @@
+ set title "Residual plot"
+ set logscale y
+ plot "cylinder_analysis.csv" using 1:3 title "rho" with lines
+ pause -1

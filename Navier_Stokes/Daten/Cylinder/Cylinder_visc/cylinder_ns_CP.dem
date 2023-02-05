@@ -1,0 +1,5 @@
+ set title "Cp plot"
+ set xlabel "theta "
+ set ylabel "cp "
+ plot "cylinder_ns_CP_pressureside.csv" using 3:4 w l lc rgb "black" t "pressure side", "cylinder_ns_CP_suctionside.csv" using 3:4 w l lc rgb "blue" t "suction side"
+ pause -1
