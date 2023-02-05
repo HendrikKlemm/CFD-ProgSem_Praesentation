@@ -1,0 +1,4 @@
+ set title "CL/CD plot"
+ plot "cylinder_ns_analysis.csv" using 1:4 title "CL" with lines,\
+ "cylinder_ns_analysis.csv" using 1:5 title "CD" with lines
+ pause -1
