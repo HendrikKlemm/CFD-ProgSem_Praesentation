@@ -22,3 +22,13 @@ Hat die um eine Ordnung geringere Bestimmung der Gradiententerme einen Einfluss 
 Wie verhält sich die Ordnung mit zu ohne Viskosität
 - Unabhängig. Auch hier wieder nährungsweise gleich. Lediglich Unterschied bei SImulationsdauer (DFL - Bedingung)
   
+
+## Zylinderumströmung
+- Reynoldszahl von 1000: Andere Größen müssen wieder entdimensionalisiert werden
+- Man kann das Problem jetzt natürlich nicht stationär lösen --> Karmansche Wirbelstraße die sich ausbildet.
+
+#### Welcher Unterschied ist auffallend?
+- Der Widerstandsbeiwer des reibungsbehafteten Falls ist wesentlich größer
+- Instationärer Fall mit Reibung
+
+#### Welchen zusätzlichen Widerstandsanteil 

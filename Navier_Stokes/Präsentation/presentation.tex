@@ -341,32 +341,74 @@
 	\frametitle{SineWave Testcase}
 	\framesubtitle{Konvergenzordnung}
 	Es wird ein sinusförmiger Dichtepuls transporiert.
-	\newline
-
 	
-Raumordnung: \quad 1, 2\\
-$\mu$: \quad \quad \quad \quad \quad \quad \quad 0, 0.01, 0.05, 0.1\\
-Gitterzahl: \quad \quad \quad 100x100, 200x200, 400x400\\ \\ \\
-Die empirische Konvergenzordnung des Verfahrens ergibt sich zu
-$$n=\frac{log(\frac{E_1}{E_2})}{log(\frac{h_1}{h_2})},$$
-wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstellen.
-% variiert wurden hier 1. Ordnung, 2. mu 3. Gitter
-% Ausführliche Ergebnisse im Anhang
-%
+\begin{columns}
+	
+	\column{0.55 \textwidth}
+	Raumordnung: \quad 1, 2\\
+	$\mu$: \quad \quad \quad \quad \quad \quad \quad 0, 0.01, 0.05, 0.1\\
+	Gitterzahl: \quad \quad \quad 100x100, 200x200, 400x400
+	\vspace*{0.5cm}
+
+
+	Die empirische Konvergenzordnung des Verfahrens ergibt sich zu
+	\begin{equation}
+		n=\frac{log(\frac{E_1}{E_2})}{log(\frac{h_1}{h_2})},
+	\end{equation}
+	
+	wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstellen.
+	% variiert wurden hier 1. Ordnung, 2. mu 3. Gitter
+	% Ausführliche Ergebnisse im Anhang
+	%
+
+	\column{0.4 \textwidth}
+	\vspace*{-2cm}
+	\begin{figure}
+		\includegraphics[width=\textwidth]{sinus_wave_density.png}
+		\vspace*{-1cm}
+		\caption{SineWave Testcase Density für $\mu=0.1$}
+	\end{figure}
+\end{columns}
 \end{frame}
 
 
 
 
+% \begin{frame}
+% 	\frametitle{SineWave Testcase}
+
+% 	\begin{figure}
+% 		\includegraphics[width=0.8\linewidth]{SineWave_viscous.png}
+% 		\caption{SineWave Testcase VelocityMagnitude für $\mu=0.2$ und $t=0.1s$, sowie $t=2.5s$}
+% 	\end{figure}
+% 	% hier konnte optisch kein Unterschied gesehen werden bei verschiedenen Viskositäten, hier aber der Vergleich nach t=0.1s und t=2.5s
+% 	% Interessant: Die Farben werden intensiver, also größere/kleinere Werte! Hätte ich anders erwartet.
+
+% \end{frame}
+
+
+
 \begin{frame}
 	\frametitle{SineWave Testcase}
+	\framesubtitle{Konvergenzordnung}
 
-	\begin{figure}
-		\includegraphics[width=0.8\linewidth]{SineWave_viscous.png}
-		\caption{SineWave Testcase VelocityMagnitude für $\mu=0.2$ und $t=0.1s$, sowie $t=2.5s$}
-	\end{figure}
-	% hier konnte optisch kein Unterschied gesehen werden bei verschiedenen Viskositäten, hier aber der Vergleich nach t=0.1s und t=2.5s
-	% Interessant: Die Farben werden intensiver, also größere/kleinere Werte! Hätte ich anders erwartet.
+		\begin{table}
+			\begin{tabular}{l l l l l}
+				\toprule
+				Ordnung & $\mu$  & $n_2$-Ordnung & Rechenzeit [s]\\
+				\midrule
+				1 & 0 & 0.980 & 91.50\\
+				1 & 0.01  & 0.979& 387.41\\
+				1 & 0.05 &  0.962 & 1906.77\\
+				1 & 0.1 &  0.972  & 3263.09\\
+				\bottomrule
+			\end{tabular}
+			\caption{Rechenzeit und Ordnung bei O1}
+	\end{table}
+
+% Euler war im Prinzip gleich wie NS mu=0
+%Frage: Warum entspricht die empirische Konvergenzordnung nicht 1 bzw 2? Warum ist die geringer?
+%Frage: für O1 werden die Ableitungen hier mit den integralen Zellmittelwerten gebildet (eigentlich Entkopplung?)
 
 \end{frame}
 
@@ -376,107 +418,144 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 	\frametitle{SineWave Testcase}
 	\framesubtitle{Konvergenzordnung}
 
-	\begin{tabular}{|c|c|c|c|c|}
-		\hline
-		Ordnung & $\mu$  & $n_1-Ordnung$& $n_2-Ordnug$& $n_{inf}-Ordnung$\\
-		\hline
-		1 & 0 & 0.980 & 0.980 & 0.968 \\
-		\hline
-		2 & 0 & 1.80 & 1.85 & 1.81 \\
-		\hline
-		1 & 0.01 & 0.964 & 0.979 & 0.752 \\
-		\hline
-		2 & 0.01 & 2.03& 2.02 & 1.71 \\
-		\hline
-		1 & 0.05 & 0.965& 0.962 & 0.866 \\
-		\hline
-		2 & 0.05 &1.97 & 1.87 & 1.51 \\
-		\hline
-		1 & 0.1 & 0.969& 0.972 & 0.911 \\
-		\hline
-		2 & 0.1 & 1.96& 1.81 & 1.45 \\
-		\hline
-		\end{tabular}
+		\begin{table}
+			\begin{tabular}{l l l l l}
+				\toprule
+				Ordnung & $\mu$  & $n_2$-Ordnung & Rechenzeit [s]\\
+				\midrule
+				2 & 0 &  1.85 &262.63 \\
+				2 & 0.01 &2.02 &1205.84 \\
+				2 & 0.05  & 1.87& 6123.78 \\
+				2 & 0.1 &  1.81& 11998.56\\
+				\bottomrule
+			\end{tabular}
+			\caption{Rechenzeit und Ordnung bei O1}
+	\end{table}
 
 % Euler war im Prinzip gleich wie NS mu=0
 %Frage: Warum entspricht die empirische Konvergenzordnung nicht 1 bzw 2? Warum ist die geringer?
 %Frage: für O1 werden die Ableitungen hier mit den integralen Zellmittelwerten gebildet (eigentlich Entkopplung?)
 
-	\end{frame}
+\end{frame}
 
-\begin{frame}
-	\frametitle{SineWave Testcase}
-	\framesubtitle{Rechenzeit}
-	\begin{table}[h]
-	\begin{tabular*}{0.4\textwidth}{|c|c|c|c|}
-		\hline
-		O & $\mu$ & Gitter & Rechenzeit [s]\\
-		\hline
-		1 & 0 & 100x100 & 1.99\\
-		\hline
-		1 & 0.01 & 100x100 & 1.46\\
-		\hline
-		1 & 0.05 & 100x100 & 6.67\\
-		\hline
-		1 & 0.1 & 100x100 & 14.0\\
-		\hline
-		1 & 0 & 200x200 & 10.18\\
-		\hline
-		1 & 0.01 & 200x200 & 21.99\\
-		\hline
-		1 & 0.05 & 200x200 & 102.76\\
-		\hline
-		1 & 0.1 & 200x200 & 226.78\\
-		\hline
-		1 & 0 & 400x400 & 91.5\\
-		\hline
-		1 & 0.01 & 400x1400 & 387.41\\
-		\hline
-		1 & 0.05 & 1400x400 & 1906.77\\
-		\hline
-		1 & 0.1 & 400x1400 & 3263.09\\
-		\hline
-	\end{tabular*}
-	\hspace{0.05\textwidth}
-	\begin{tabular*}{0.4\textwidth}{@{\extracolsep{\fill}}|c|c|c|c|}
-		\hline
-		O & $\mu$ & Gitter & Rechenzeit [s]\\
-		\hline
-		2 & 0 & 100x100 & 4.74\\
-		\hline
-		2 & 0.01 & 100x100 & 4.93\\
-		\hline
-		2 & 0.05 & 100x100 & 24.55\\
-		\hline
-		2 & 0.1 & 100x100 & 46.84\\
-		\hline
-		2 & 0 & 200x200 & 33.05\\
-		\hline
-		2 & 0.01 & 200x200 & 74.19\\
-		\hline
-		2 & 0.05 & 200x200 & 368.89\\
-		\hline
-		2 & 0.1 & 200x200 & 737.04\\
-		\hline
-		2 & 0 & 400s400 & 262.63 \\
-		\hline
-		2 & 0 & 400s400 & 1205.84 \\
-		\hline
-		2 & 0 & 400s400 & 6123.78 \\
-		\hline
-		2 & 0 & 400s400 & 11998.56 \\
-		\hline
-		\end{tabular*}
-	\end{table}
+
+	% \begin{frame}
+	% 	\frametitle{SineWave Testcase}
+	% 	\framesubtitle{Konvergenzordnung}
+	
+	% 	\begin{tabular}{|c|c|c|c|c|}
+	% 		\hline
+	% 		Ordnung & $\mu$  & $n_1-Ordnung$& $n_2-Ordnug$& $n_{inf}-Ordnung$\\
+
+	% 		2 & 0 &  1.85  \\
+	% 		2 & 0.01 &2.02  \\
+	% 		2 & 0.05  & 1.87  \\
+	% 		2 & 0.1 &  1.81 \\
+	% 		\end{tabular}
+	
+	% % Euler war im Prinzip gleich wie NS mu=0
+	% %Frage: Warum entspricht die empirische Konvergenzordnung nicht 1 bzw 2? Warum ist die geringer?
+	% %Frage: für O1 werden die Ableitungen hier mit den integralen Zellmittelwerten gebildet (eigentlich Entkopplung?)
+	
+	% 	\end{frame}
+
+
+
+
+
+
+% \begin{frame}
+% 	\frametitle{SineWave Testcase}
+% 	\framesubtitle{Rechenzeit}
+% 	\begin{table}[h]
+% 	\begin{tabular*}{0.4\textwidth}{|c|c|c|c|}
+% 		\hline
+% 		O & $\mu$ & Gitter & Rechenzeit [s]\\
+% 		\hline
+% 		1 & 0 & 100x100 & 1.99\\
+% 		\hline
+% 		1 & 0.01 & 100x100 & 1.46\\
+% 		\hline
+% 		1 & 0.05 & 100x100 & 6.67\\
+% 		\hline
+% 		1 & 0.1 & 100x100 & 14.0\\
+% 		\hline
+% 		1 & 0 & 200x200 & 10.18\\
+% 		\hline
+% 		1 & 0.01 & 200x200 & 21.99\\
+% 		\hline
+% 		1 & 0.05 & 200x200 & 102.76\\
+% 		\hline
+% 		1 & 0.1 & 200x200 & 226.78\\
+% 		\hline
+% 		1 & 0 & 400x400 & 91.5\\
+% 		\hline
+% 		1 & 0.01 & 400x1400 & 387.41\\
+% 		\hline
+% 		1 & 0.05 & 1400x400 & 1906.77\\
+% 		\hline
+% 		1 & 0.1 & 400x1400 & 3263.09\\
+% 		\hline
+% 	\end{tabular*}
+% 	\hspace{0.05\textwidth}
+% 	\begin{tabular*}{0.4\textwidth}{@{\extracolsep{\fill}}|c|c|c|c|}
+% 		\hline
+% 		O & $\mu$ & Gitter & Rechenzeit [s]\\
+% 		\hline
+% 		2 & 0 & 100x100 & 4.74\\
+% 		\hline
+% 		2 & 0.01 & 100x100 & 4.93\\
+% 		\hline
+% 		2 & 0.05 & 100x100 & 24.55\\
+% 		\hline
+% 		2 & 0.1 & 100x100 & 46.84\\
+% 		\hline
+% 		2 & 0 & 200x200 & 33.05\\
+% 		\hline
+% 		2 & 0.01 & 200x200 & 74.19\\
+% 		\hline
+% 		2 & 0.05 & 200x200 & 368.89\\
+% 		\hline
+% 		2 & 0.1 & 200x200 & 737.04\\
+% 		\hline
+% 		2 & 0 & 400s400 & 262.63 \\
+% 		\hline
+% 		2 & 0 & 400s400 & 1205.84 \\
+% 		\hline
+% 		2 & 0 & 400s400 & 6123.78 \\
+% 		\hline
+% 		2 & 0 & 400s400 & 11998.56 \\
+% 		\hline
+% 		\end{tabular*}
+% 	\end{table}
 
 %learnings 1. teilweise ist die ns mit geringem mu schneller als euler?!
 %          2. Rechenzeit steigt wie zu erwarten mit der Gitteranzahl
 %          3. Rechenzeit steigt mit mu um den faktor mu (DFL-Bedingung)
-\end{frame}
+% \end{frame}
 
 \subsection{Blasius Boundary Layer}
 \begin{frame}
-	\frametitle{laminare Grenzschicht auf einer ebenen Platte}
+	\frametitle{Blasius Grenzschicht}
+	
+	\begin{columns}
+	\column{0.6\textwidth}
+
+		\begin{itemize}
+			\item Entdimensionalisierung der Größen
+			\item Vergleich der numerischen Ergebnisse mit der analytischen Lösung der Grenzschichtgleichung.
+			\item Implizite Berechnung (DFL-Bedingung)
+		\end{itemize}
+	\column{0.3\textwidth}
+	Grenzschichtgleichung:
+	\begin{equation}
+		\delta_{99} = \frac{5 \cdot x}{\sqrt{Re_x}}
+	\end{equation}
+	\end{columns}
+	
+
+
+
 	\begin{center}
 		\begin{figure}
 			\includegraphics[width=0.9\linewidth]{boundary_layer.png}
@@ -560,6 +639,12 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 
  \begin{frame}
  	\frametitle{Lessons learned}
+
+	\begin{itemize}
+		\item DFL-Bedingung erhöht Rechenzeit unter Umständen spürbar
+		\item Viskosität hat keinen Einfluss auf das Konvergenzverhalten
+		\item Ergebnisse der numerischen Lösung sind Modellabhängig $\Rightarrow$ Vorsicht bei der Konstruktion der Randbedingungen! 
+	\end{itemize}
 
  \end{frame}
 
