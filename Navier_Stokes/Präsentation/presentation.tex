@@ -247,21 +247,6 @@
 %---------------------------------------------
 \subsection{Schwache Form}
 
-\begin{frame}
-
-	\frametitle{viskose Flüsse}
-
-\end{frame}
-
-
-
-\begin{frame}
-	\frametitle{Flussberechnung auf strukturierten Gittern}
-
-\end{frame}
-
-
-\subsection{?}
 
 \begin{frame}
 	\frametitle{Flussberechnung auf unstrukturierten Gittern}
@@ -296,8 +281,6 @@
 	%\framesubtitle{} % Optional subtitle
 	
 % dazusagen: Vergleich Euler vs. NS(mu=0) ist in der Rechenzeit und der Fehlerordnung ziemlich vergleichbar. Rechenzeit erhöht sich leicht bei NS
-
-
 \end{frame}
 
 
@@ -415,20 +398,38 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 \end{frame}
 
 \subsection{A2}
-
 \begin{frame}
-	\frametitle{Blasius Boundary Layer Testcase}
-
-	% Bild
-
+	\frametitle{laminare Grenzschicht auf einer ebenen Platte}
+	\begin{center}
+		\begin{figure}
+			\includegraphics[width=0.9\linewidth]{boundary_layer.png}
+			\caption{Axialgeschwindigkeit über einer laminar angeströmten ebenen Platte.}
+		\end{figure}
+	\end{center}
 \end{frame}
 
+\begin{frame}
+	\frametitle{Grenzschichtströmung}
+	\framesubtitle{Geschwindigkeitsprofil}
+	\begin{center}
+		\begin{figure}
+			\includegraphics[width=0.5\linewidth]{vx_x=2.png}
+			\caption{Profil der Axialgeschwindigkeit an der Stelle x=2.}
+		\end{figure}
+	\end{center}
+% Warum ist v>1 teils? -> Masseerhaltung
+\end{frame}
 
 \begin{frame}
-	\frametitle{Blasius Boundary Layer Testcase}
-	\framesubtitle{Vergleich des Grenzschichtverlaufs} % Optional subtitle
-	% vergleich der GS-Dicke bei x=2
-	% ggf. Verlauf der GS-Dicke über x
+	\frametitle{Grenzschichtströmung}
+	\framesubtitle{Grenzschichtdicke}
+	\begin{center}
+		\begin{figure}
+			\includegraphics[width=0.6\linewidth]{a2_plot.png}
+			\caption{Vergleich der theoretischen Grenzschichtdicke zur Simulation.}
+		\end{figure}
+	\end{center}
+% relativ gute Übereinstimmung. 
 \end{frame}
 
 
@@ -437,7 +438,7 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 \frametitle{Cylinder Testcase}
 \framesubtitle{Überblick}
 \begin{figure}
-	\includegraphics[width=0.8\linewidth]{cylinder_pressure.png}
+	\includegraphics[width=0.6\linewidth]{cylinder_pressure.png}
 	\caption{Cylinder Testcase ohne Reibungseinfluss (links) und mit Reibungseinfluss (rechts)}
 \end{figure}
 
