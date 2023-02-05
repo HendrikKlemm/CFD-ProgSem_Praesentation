@@ -373,9 +373,9 @@
 		\includegraphics[width=0.8\linewidth]{SineWave_viscous.png}
 		\caption{SineWave Testcase VelocityMagnitude für $\mu=0.2$ und $t=0.1s$, sowie $t=2.5s$}
 	\end{figure}
-	%\framesubtitle{} % Optional subtitle
-	
-% dazusagen: Vergleich Euler vs. NS(mu=0) ist in der Rechenzeit und der Fehlerordnung ziemlich vergleichbar. Rechenzeit erhöht sich leicht bei NS
+	% hier konnte optisch kein Unterschied gesehen werden bei verschiedenen Viskositäten, hier aber der Vergleich nach t=0.1s und t=2.5s
+	% Interessant: Die Farben werden intensiver, also größere/kleinere Werte! Hätte ich anders erwartet.
+
 \end{frame}
 
 
@@ -388,7 +388,9 @@ Gitterzahl: \quad \quad \quad 100x100, 200x200, 400x400\\ \\ \\
 Die empirische Konvergenzordnung des Verfahrens ergibt sich zu
 $$n=\frac{log(\frac{E_1}{E_2})}{log(\frac{h_1}{h_2})},$$
 wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstellen.
-
+% variiert wurden hier 1. Ordnung, 2. mu 3. Gitter
+% Ausführliche Ergebnisse im Anhang
+%
 \end{frame}
 \begin{frame}
 	\frametitle{SineWave Testcase}
@@ -416,8 +418,10 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 		\hline
 		\end{tabular}
 
+% Euler war im Prinzip gleich wie NS mu=0
 %Frage: Warum entspricht die empirische Konvergenzordnung nicht 1 bzw 2? Warum ist die geringer?
-%Frage: eigentlich sollten viskose Flüsse nur mit O2 möglich sein? Was bedeutet das hier?
+%Frage: für O1 werden die Ableitungen hier mit den integralen Zellmittelwerten gebildet (eigentlich Entkopplung?)
+
 	\end{frame}
 
 \begin{frame}
@@ -485,8 +489,6 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 		\end{tabular*}
 	\end{table}
 
-	%todo: beide tabellen nebeneinander statt untereinander
-
 %learnings 1. teilweise ist die ns mit geringem mu schneller als euler?!
 %          2. Rechenzeit steigt wie zu erwarten mit der Gitteranzahl
 %          3. Rechenzeit steigt mit mu um den faktor mu (DFL-Bedingung)
@@ -525,6 +527,8 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 		\end{figure}
 	\end{center}
 % relativ gute Übereinstimmung. 
+% Warum wird hier implizit gerechnet??
+% Warum wird GS nicht turublent? -> Weil wir 2D sind! (Außerdem Re-Zahlen viel zu gering, am Ende Re=2500 (Re_krit = 5*10^5))
 \end{frame}
 
 
@@ -533,8 +537,9 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 \frametitle{Cylinder Testcase}
 \framesubtitle{Überblick}
 \begin{figure}
-	\includegraphics[width=0.6\linewidth]{cylinder_pressure.png}
+	\includegraphics[width=1\linewidth]{cylinder_pressure_zoom.png}
 	\caption{Cylinder Testcase ohne Reibungseinfluss (links) und mit Reibungseinfluss (rechts)}
+%Auffallend: 1. Karmansche Wirbelstraße 
 \end{figure}
 
 
@@ -558,12 +563,12 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 		\end{tabular}
 	\end{center}
 	\begin{figure}
-		\includegraphics[width=0.3\linewidth]{cylinder_visc_cl_cd_graph.png}
+		\includegraphics[width=0.35\linewidth]{cylinder_visc_cl_cd_graph.png}
 		\caption{Verlauf des Auftriebs- und Widerstandbeiwertes über der Iteration für $\mu=0.001$}
 	\end{figure}
-	%plot d_l über phi wär noch geil
-	% warum entsteht auftrieb? -> Zirkulationserhaltung Satz von Thompson
-	%mu einheiten!
+% Reibung ist jetzt dabei -> Reibungswiderstand
+% führt zu instationärer Strömung -> Karmansche Wirbelstraße
+% Wirbel erzeugen durch Zirkulationserhaltung Auftrieb
 \end{frame}
 
 %------------------------------------------------
@@ -590,7 +595,7 @@ wobei E die Diskretisierungsfehler und h den gemittelten Gitterabstand darstelle
 		
 		{\Large Vielen Dank für die Aufmerksamkeit!}
 		\begin{figure}
-			\includegraphics[width=0.5\linewidth]{title_Gausspuls.png}
+			\includegraphics[width=0.5\linewidth]{Navier.png}
 			%\caption{Gausspuls auf kartesischem Gitter (oben) und unstrukturiertem kreisförmigem Gitter (unten)}
 		\end{figure}
 	\end{center}

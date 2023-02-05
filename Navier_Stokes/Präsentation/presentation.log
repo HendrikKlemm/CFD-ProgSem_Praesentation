@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.9)  5 FEB 2023 12:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.9)  5 FEB 2023 12:50
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1235,6 +1235,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 165.
 LaTeX Info: Redefining \pageref on input line 165.
 LaTeX Info: Redefining \nameref on input line 165.
+ (presentation.out) (presentation.out)
 \@outlinefile=\write7
 \openout7 = `presentation.out'.
 
@@ -1304,18 +1305,18 @@ Dictionary: translator-theorem-dictionary, Language: English
 \c@mv@tabular=\count415
 \c@mv@boldtabular=\count416
 \c@lstlisting=\count417
-
-No file presentation.nav.
+ (presentation.nav)
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 165.
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
 65.
+
 (C:\Users\Hendrik\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 179.
-<Images//Navier.png, id=25, 2268.475pt x 1037.8775pt>
+<Images//Navier.png, id=61, 2268.475pt x 1037.8775pt>
 File: Images//Navier.png Graphic file (type png)
 <use Images//Navier.png>
 Package pdftex.def Info: Images//Navier.png  used on input line 179.
@@ -1329,30 +1330,30 @@ LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
 [1
 
 {C:/Users/Hendrik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Images//
-Navier.png>]
-No file presentation.toc.
-[2
+Navier.png>] (presentation.toc) [2
 
 ]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 219
 .
- (C:\Users\Hendrik\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+
+(C:\Users\Hendrik\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 219
 .
+
 (C:\Users\Hendrik\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [3
 
 ]
-<Images//konvekitv.png, id=116, 222.4561pt x 142.28156pt>
+<Images//konvekitv.png, id=168, 222.4561pt x 142.28156pt>
 File: Images//konvekitv.png Graphic file (type png)
 <use Images//konvekitv.png>
 Package pdftex.def Info: Images//konvekitv.png  used on input line 246.
 (pdftex.def)             Requested size: 173.33826pt x 110.86626pt.
-<Images//Viskos.png, id=117, 221.70328pt x 149.05687pt>
+<Images//Viskos.png, id=169, 221.70328pt x 149.05687pt>
 File: Images//Viskos.png Graphic file (type png)
 <use Images//Viskos.png>
 Package pdftex.def Info: Images//Viskos.png  used on input line 246.
@@ -1360,7 +1361,7 @@ Package pdftex.def Info: Images//Viskos.png  used on input line 246.
  [4
 
  <./Images//konvekitv.png> <./Images//Viskos.png>]
-<Images//visc_fluesse.png, id=146, 473.97075pt x 248.127pt>
+<Images//visc_fluesse.png, id=198, 473.97075pt x 248.127pt>
 File: Images//visc_fluesse.png Graphic file (type png)
 <use Images//visc_fluesse.png>
 Package pdftex.def Info: Images//visc_fluesse.png  used on input line 257.
@@ -1383,7 +1384,7 @@ r/m/n/10.95 + \OT1/ppl/m/it/10.95 U[] \OT1/cmr/m/n/10.95 + \OT1/ppl/m/it/10.95
 U[] \OT1/cmr/m/n/10.95 + \OT1/ppl/m/it/10.95 U[]\OT1/cmr/m/n/10.95 )
  []
 
-<Images//Mittellung_ueber_Zellen.png, id=204, 381.67593pt x 382.05234pt>
+<Images//Mittellung_ueber_Zellen.png, id=254, 381.67593pt x 382.05234pt>
 File: Images//Mittellung_ueber_Zellen.png Graphic file (type png)
 <use Images//Mittellung_ueber_Zellen.png>
 Package pdftex.def Info: Images//Mittellung_ueber_Zellen.png  used on input lin
@@ -1392,7 +1393,7 @@ e 293.
 [7
 
  <./Images//Mittellung_ueber_Zellen.png>]
-<Images//unstruct_flux.png, id=234, 374.90062pt x 352.31625pt>
+<Images//unstruct_flux.png, id=284, 374.90062pt x 352.31625pt>
 File: Images//unstruct_flux.png Graphic file (type png)
 <use Images//unstruct_flux.png>
 Package pdftex.def Info: Images//unstruct_flux.png  used on input line 315.
@@ -1409,7 +1410,7 @@ Overfull \vbox (15.88728pt too high) detected at line 363
 [10
 
 ]
-<Images//SineWave_viscous.png, id=316, 1129.21875pt x 568.37344pt>
+<Images//SineWave_viscous.png, id=362, 1129.21875pt x 568.37344pt>
 File: Images//SineWave_viscous.png Graphic file (type png)
 <use Images//SineWave_viscous.png>
 Package pdftex.def Info: Images//SineWave_viscous.png  used on input line 379.
@@ -1427,78 +1428,82 @@ Overfull \vbox (0.68697pt too high) detected at line 379
 ] [13
 
 ]
-Overfull \hbox (25.34235pt too wide) in alignment at lines 493--493
+Overfull \hbox (25.34235pt too wide) in alignment at lines 495--495
 [][][][]
  []
 
 
-Overfull \hbox (19.08115pt too wide) in alignment at lines 493--493
+Overfull \hbox (19.08115pt too wide) in alignment at lines 495--495
 [] [] [] []
  []
 
 [14
 
 ]
-<Images//boundary_layer.png, id=424, 1145.02782pt x 235.63031pt>
+<Images//boundary_layer.png, id=468, 1145.02782pt x 235.63031pt>
 File: Images//boundary_layer.png Graphic file (type png)
 <use Images//boundary_layer.png>
-Package pdftex.def Info: Images//boundary_layer.png  used on input line 504.
+Package pdftex.def Info: Images//boundary_layer.png  used on input line 506.
 (pdftex.def)             Requested size: 390.00697pt x 80.25705pt.
  [15
 
  <./Images//boundary_layer.png>]
-<Images//vx_x=2.png, id=452, 991.705pt x 757.83125pt>
+<Images//vx_x=2.png, id=496, 991.705pt x 757.83125pt>
 File: Images//vx_x=2.png Graphic file (type png)
 <use Images//vx_x=2.png>
-Package pdftex.def Info: Images//vx_x=2.png  used on input line 516.
+Package pdftex.def Info: Images//vx_x=2.png  used on input line 518.
 (pdftex.def)             Requested size: 216.67201pt x 165.56703pt.
 
-Overfull \vbox (3.7599pt too high) detected at line 516
+Overfull \vbox (3.7599pt too high) detected at line 518
  []
 
 [16
 
  <./Images//vx_x=2.png (PNG copy)>]
-<Images//a2_plot.png, id=479, 576.408pt x 340.983pt>
+<Images//a2_plot.png, id=522, 576.408pt x 340.983pt>
 File: Images//a2_plot.png Graphic file (type png)
 <use Images//a2_plot.png>
-Package pdftex.def Info: Images//a2_plot.png  used on input line 528.
+Package pdftex.def Info: Images//a2_plot.png  used on input line 532.
 (pdftex.def)             Requested size: 260.00905pt x 153.81033pt.
  [17
 
  <./Images//a2_plot.png>]
-<Images//cylinder_pressure.png, id=507, 1149.5447pt x 495.35063pt>
-File: Images//cylinder_pressure.png Graphic file (type png)
-<use Images//cylinder_pressure.png>
-Package pdftex.def Info: Images//cylinder_pressure.png  used on input line 545.
-
-(pdftex.def)             Requested size: 260.00905pt x 112.03864pt.
+<Images//cylinder_pressure_zoom.png, id=549, 1027.58907pt x 205.5178pt>
+File: Images//cylinder_pressure_zoom.png Graphic file (type png)
+<use Images//cylinder_pressure_zoom.png>
+Package pdftex.def Info: Images//cylinder_pressure_zoom.png  used on input line
+ 550.
+(pdftex.def)             Requested size: 433.34402pt x 86.6681pt.
  [18
 
- <./Images//cylinder_pressure.png>]
-<Images//cylinder_visc_cl_cd_graph.png, id=535, 991.705pt x 757.83125pt>
+ <./Images//cylinder_pressure_zoom.png>]
+<Images//cylinder_visc_cl_cd_graph.png, id=575, 991.705pt x 757.83125pt>
 File: Images//cylinder_visc_cl_cd_graph.png Graphic file (type png)
 <use Images//cylinder_visc_cl_cd_graph.png>
 Package pdftex.def Info: Images//cylinder_visc_cl_cd_graph.png  used on input l
-ine 567.
-(pdftex.def)             Requested size: 130.00452pt x 99.34253pt.
- [19
+ine 572.
+(pdftex.def)             Requested size: 151.67305pt x 115.90155pt.
+
+Overfull \vbox (5.49437pt too high) detected at line 572
+ []
+
+[19
 
  <./Images//cylinder_visc_cl_cd_graph.png (PNG copy)>] [20
 
 ]
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 597.
-<Images//title_Gausspuls.png, id=590, 380.17032pt x 344.03531pt>
-File: Images//title_Gausspuls.png Graphic file (type png)
-<use Images//title_Gausspuls.png>
-Package pdftex.def Info: Images//title_Gausspuls.png  used on input line 597.
-(pdftex.def)             Requested size: 216.67201pt x 196.08116pt.
+(Font)              scaled to size 14.4pt on input line 602.
+File: Images//Navier.png Graphic file (type png)
+<use Images//Navier.png>
+Package pdftex.def Info: Images//Navier.png  used on input line 602.
+(pdftex.def)             Requested size: 216.67201pt x 99.122pt.
  [21
 
- <./Images//title_Gausspuls.png>] [22
+] [22
 
-] [23
+]
+[23
 
 ] [24
 
@@ -1512,25 +1517,18 @@ Package pdftex.def Info: Images//title_Gausspuls.png  used on input line 597.
 \tf@snm=\write10
 \openout10 = `presentation.snm'.
 
-
-(presentation.aux)
-
-Package rerunfilecheck Warning: File `presentation.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `presentation.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  042DA67B0C167A0BBFC03AFAE066BAD2;1296.
+ (presentation.aux)
+Package rerunfilecheck Info: File `presentation.out' has not changed.
+(rerunfilecheck)             Checksum: 042DA67B0C167A0BBFC03AFAE066BAD2;1296.
  ) 
 Here is how much of TeX's memory you used:
- 28938 strings out of 478659
- 576723 string characters out of 2844973
- 900388 words of memory out of 3000000
- 46329 multiletter control sequences out of 15000+600000
+ 29059 strings out of 478659
+ 578892 string characters out of 2844973
+ 900489 words of memory out of 3000000
+ 46443 multiletter control sequences out of 15000+600000
  426031 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,122p,1094b,637s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,16n,122p,1094b,716s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}{
 C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/opensans/a_n3lhb
 v.enc}<C:/Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/type1/ascender/open
@@ -1548,9 +1546,9 @@ nts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Hendrik/AppData/Local/Programs
 /MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Hendrik/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Hendrik/A
 ppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on presentation.pdf (24 pages, 984993 bytes).
+Output written on presentation.pdf (24 pages, 906558 bytes).
 PDF statistics:
- 766 PDF objects out of 1000 (max. 8388607)
+ 801 PDF objects out of 1000 (max. 8388607)
  58 named destinations out of 1000 (max. 500000)
- 144 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 211 words of extra memory for PDF output out of 10000 (max. 10000000)
 
