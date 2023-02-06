@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.9)  6 FEB 2023 08:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.9)  6 FEB 2023 08:20
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1459,11 +1459,11 @@ Overfull \vbox (92.87904pt too high) detected at line 642
 
 ]
 LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 701.
+(Font)              scaled to size 14.4pt on input line 702.
 <Images//Navier.png, id=550, 2268.475pt x 1037.8775pt>
 File: Images//Navier.png Graphic file (type png)
 <use Images//Navier.png>
-Package pdftex.def Info: Images//Navier.png  used on input line 701.
+Package pdftex.def Info: Images//Navier.png  used on input line 702.
 (pdftex.def)             Requested size: 216.67201pt x 99.122pt.
  [18
 
@@ -1472,14 +1472,14 @@ Package pdftex.def Info: Images//Navier.png  used on input line 701.
 ] [20
 
 ]
-Overfull \hbox (7.14528pt too wide) detected at line 775
+Overfull \hbox (7.14528pt too wide) detected at line 776
 \OT1/ppl/m/it/10.95 U[] \OT1/cmr/m/n/10.95 = [](\OT1/ppl/m/it/10.95 U[] \OT1/cm
 r/m/n/10.95 + \OT1/ppl/m/it/10.95 U[] \OT1/cmr/m/n/10.95 + \OT1/ppl/m/it/10.95 
 U[] \OT1/cmr/m/n/10.95 + \OT1/ppl/m/it/10.95 U[]\OT1/cmr/m/n/10.95 )
  []
 
 
-Overfull \hbox (7.14528pt too wide) detected at line 775
+Overfull \hbox (7.14528pt too wide) detected at line 776
 \OT1/ppl/m/it/10.95 U[] \OT1/cmr/m/n/10.95 = [](\OT1/ppl/m/it/10.95 U[] \OT1/cm
 r/m/n/10.95 + \OT1/ppl/m/it/10.95 U[] \OT1/cmr/m/n/10.95 + \OT1/ppl/m/it/10.95 
 U[] \OT1/cmr/m/n/10.95 + \OT1/ppl/m/it/10.95 U[]\OT1/cmr/m/n/10.95 )
@@ -1489,7 +1489,7 @@ U[] \OT1/cmr/m/n/10.95 + \OT1/ppl/m/it/10.95 U[]\OT1/cmr/m/n/10.95 )
 File: Images//Mittellung_ueber_Zellen.png Graphic file (type png)
 <use Images//Mittellung_ueber_Zellen.png>
 Package pdftex.def Info: Images//Mittellung_ueber_Zellen.png  used on input lin
-e 775.
+e 776.
 (pdftex.def)             Requested size: 136.50183pt x 136.63513pt.
 [21
 
@@ -1497,7 +1497,7 @@ e 775.
 <Images//unstruct_flux.png, id=661, 374.90062pt x 352.31625pt>
 File: Images//unstruct_flux.png Graphic file (type png)
 <use Images//unstruct_flux.png>
-Package pdftex.def Info: Images//unstruct_flux.png  used on input line 797.
+Package pdftex.def Info: Images//unstruct_flux.png  used on input line 798.
 (pdftex.def)             Requested size: 156.00337pt x 146.60632pt.
  [22
 
@@ -1524,7 +1524,7 @@ Package rerunfilecheck Info: File `presentation.out' has not changed.
 Here is how much of TeX's memory you used:
  29086 strings out of 478659
  579488 string characters out of 2844973
- 893489 words of memory out of 3000000
+ 893490 words of memory out of 3000000
  46467 multiletter control sequences out of 15000+600000
  425375 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1548,7 +1548,7 @@ a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/User
 s/Hendrik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:
 /Users/Hendrik/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.p
 fb>
-Output written on presentation.pdf (25 pages, 1028763 bytes).
+Output written on presentation.pdf (25 pages, 1028810 bytes).
 PDF statistics:
  842 PDF objects out of 1000 (max. 8388607)
  60 named destinations out of 1000 (max. 500000)
